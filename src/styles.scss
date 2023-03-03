@@ -23,3 +23,11 @@
 .text-weight-400 {
     font-weight: 400 !important;
 }
+
+ion-button {
+    --box-shadow: none;
+}
+
+ion-input {
+    --padding-bottom: 0 !important;
+}

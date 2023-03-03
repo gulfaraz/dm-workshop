@@ -6,8 +6,8 @@ import { CombatTokensComponent } from './combat-tokens.component';
 
 @NgModule({
     imports: [
-        IonicModule,
         RouterModule.forChild([{ path: '', component: CombatTokensComponent }]),
+        IonicModule,
     ],
     declarations: [CombatTokensComponent],
     exports: [CombatTokensComponent],

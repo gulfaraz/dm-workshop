@@ -1,0 +1,91 @@
+<ion-grid class="ion-margin">
+    <ion-row>
+        <ion-col size="6">
+            <ion-button
+                expand="block"
+                color="success"
+                type="submit"
+                disabled="true"
+                >Save</ion-button
+            >
+        </ion-col>
+        <ion-col size="6">
+            <ion-button
+                expand="block"
+                fill="outline"
+                color="danger"
+                type="reset"
+                disabled="true"
+                >Clear</ion-button
+            >
+        </ion-col>
+        <ion-col size="3">
+            <ion-item fill="outline">
+                <ion-label position="floating">Identifier</ion-label>
+                <ion-input
+                    class="ion-text-center"
+                    placeholder="000000"
+                    required="true"
+                    [debounce]="debounce"
+                ></ion-input>
+            </ion-item>
+        </ion-col>
+        <ion-col size="9">
+            <ion-item fill="outline">
+                <ion-label position="floating">Name</ion-label>
+                <ion-input
+                    class="ion-text-center"
+                    placeholder="Cloak of Billowing"
+                    required="true"
+                    [debounce]="debounce"
+                ></ion-input>
+            </ion-item>
+        </ion-col>
+        <ion-col size="12">
+            <ion-item fill="outline">
+                <ion-label position="floating">Attunement</ion-label>
+                <ion-input
+                    class="ion-text-center"
+                    placeholder="Requires attunement (leave blank if not attuneable)"
+                    required="false"
+                    [debounce]="debounce"
+                ></ion-input>
+            </ion-item>
+        </ion-col>
+        <ion-col size="6">
+            <ion-item fill="outline">
+                <ion-label position="floating">Type</ion-label>
+                <ion-input
+                    class="ion-text-center"
+                    placeholder="Wondrous Item"
+                    required="true"
+                    [debounce]="debounce"
+                ></ion-input>
+            </ion-item>
+        </ion-col>
+        <ion-col size="6">
+            <ion-item fill="outline">
+                <ion-label position="floating">Rarity</ion-label>
+                <ion-input
+                    class="ion-text-center"
+                    placeholder="Common"
+                    required="true"
+                    [debounce]="debounce"
+                ></ion-input>
+            </ion-item>
+        </ion-col>
+        <ion-col size="12">
+            <ion-item fill="outline">
+                <ion-label position="floating">Description</ion-label>
+                <ion-textarea
+                    class="ion-text-center"
+                    placeholder="While wearing this cloak, you can use a bonus action to make it billow dramatically."
+                    [autoGrow]="true"
+                    required="true"
+                    [debounce]="debounce"
+                >
+                </ion-textarea>
+            </ion-item>
+        </ion-col>
+    </ion-row>
+</ion-grid>

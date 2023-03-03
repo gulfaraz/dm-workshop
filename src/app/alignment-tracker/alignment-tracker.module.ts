@@ -6,10 +6,10 @@ import { AlignmentTrackerComponent } from './alignment-tracker.component';
 
 @NgModule({
     imports: [
-        IonicModule,
         RouterModule.forChild([
             { path: '', component: AlignmentTrackerComponent },
         ]),
+        IonicModule,
     ],
     declarations: [AlignmentTrackerComponent],
     exports: [AlignmentTrackerComponent],
