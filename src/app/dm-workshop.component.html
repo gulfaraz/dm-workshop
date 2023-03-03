@@ -1,0 +1,25 @@
+<ion-tabs>
+    <ion-router-outlet></ion-router-outlet>
+    <ion-tab-bar
+        class="ion-justify-content-start"
+        slot="top"
+        mode="ios"
+        translucent="true"
+    >
+        <ion-tab-button class="dm-workshop" disabled="true">
+            <ion-label class="ion-text-start">
+                <h1 class="text-weight-700">DM Workshop</h1>
+                <ion-text class="text-weight-400">by Gulfaraz Rahman</ion-text>
+            </ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="item-cards">
+            <ion-label>Item Cards</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="combat-tokens" disabled="true">
+            <ion-label>Combat Tokens</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="alignment-tracker" disabled="true">
+            <ion-label>Alignment Tracker</ion-label>
+        </ion-tab-button>
+    </ion-tab-bar>
+</ion-tabs>
