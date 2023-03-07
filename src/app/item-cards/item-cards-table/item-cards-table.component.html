@@ -10,9 +10,9 @@
     >
         <ion-item-sliding *ngFor="let card of cards">
             <ion-item button lines="full" detail="false">
-                <ion-reorder slot="start"></ion-reorder>
-                <ion-label>{{ card.identifier }}</ion-label>
-                <ion-label>{{ card.name }}</ion-label>
+                <ion-reorder slot="start" title="Drag to Sort"></ion-reorder>
+                <ion-label title="Identifier">{{ card.identifier }}</ion-label>
+                <ion-label title="Name">{{ card.name }}</ion-label>
                 <ion-select
                     class="size-select ion-margin-horizontal"
                     placeholder="Size"
