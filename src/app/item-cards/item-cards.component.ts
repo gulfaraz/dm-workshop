@@ -11,4 +11,7 @@ export class ItemCardsComponent {
     preview = false;
 
     togglePreview = (preview: boolean) => (this.preview = preview);
+
+    deleteCard = (card: Card) =>
+        (this.cards = this.cards.filter((_card) => _card !== card));
 }

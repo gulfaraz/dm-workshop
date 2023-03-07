@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ItemReorderCustomEvent, SelectCustomEvent } from '@ionic/angular';
 
 import { Card, sizes } from '../item-cards.type';
@@ -10,6 +10,7 @@ import { Card, sizes } from '../item-cards.type';
 })
 export class ItemCardsTableComponent {
     @Input() cards: Card[] = [];
+    @Output() deleteCardEvent = new EventEmitter<Card>();
 
     sizes = sizes;
 
@@ -19,4 +20,6 @@ export class ItemCardsTableComponent {
 
     setCardSize = (card: Card, selectCustomEvent: SelectCustomEvent) =>
         (card.size = selectCustomEvent.detail.value);
+
+    deleteCard = (card: Card) => this.deleteCardEvent.emit(card);
 }

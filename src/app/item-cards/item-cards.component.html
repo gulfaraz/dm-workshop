@@ -16,6 +16,7 @@
                 <app-item-cards-table
                     *ngIf="!preview"
                     [cards]="cards"
+                    (deleteCardEvent)="deleteCard($event)"
                 ></app-item-cards-table>
                 <app-item-cards-viewer
                     *ngIf="preview"
