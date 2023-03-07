@@ -1,0 +1,24 @@
+<ion-header class="ion-margin-bottom">
+    <ion-toolbar color="transparent">
+        <ion-button slot="start" size="small" color="medium" fill="outline"
+            >Auto-Assign Sizes</ion-button
+        >
+        <ion-button slot="end" size="small" class="ion-margin-horizontal"
+            >Export {{ preview ? "PDF" : "Item Cards JSON" }}</ion-button
+        >
+        <ion-segment
+            class="ion-no-margin"
+            [value]="preview"
+            slot="end"
+            color="dark"
+            (ionChange)="togglePreview($any($event))"
+        >
+            <ion-segment-button value="false">
+                <ion-label>Table</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="true">
+                <ion-label>PDF</ion-label>
+            </ion-segment-button>
+        </ion-segment>
+    </ion-toolbar>
+</ion-header>

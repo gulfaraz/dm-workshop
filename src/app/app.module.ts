@@ -7,7 +7,11 @@ import { AppComponent } from './app.component';
 import { DMWorkshopComponent } from './dm-workshop.component';
 
 @NgModule({
-    imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+    imports: [
+        BrowserModule,
+        IonicModule.forRoot({ mode: 'ios' }),
+        AppRoutingModule,
+    ],
     declarations: [AppComponent, DMWorkshopComponent],
     bootstrap: [AppComponent],
     providers: [],

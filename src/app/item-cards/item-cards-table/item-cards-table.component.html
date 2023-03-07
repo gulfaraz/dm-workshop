@@ -1,1 +1,41 @@
-<ion-content>Item Cards Table</ion-content>
+<ion-list>
+    <ion-note lines="none" *ngIf="cards.length < 1" class="ion-margin">
+        Add <ion-text class="text-weight-700"> Item Cards </ion-text> using
+        <ion-text class="text-weight-700"> Item Card Form </ion-text> or
+        <ion-text class="text-weight-700"> Import Item Cards JSON </ion-text>
+    </ion-note>
+    <ion-reorder-group
+        [disabled]="false"
+        (ionItemReorder)="reorderCard($any($event))"
+    >
+        <ion-item-sliding *ngFor="let card of cards">
+            <ion-item button lines="full" detail="false">
+                <ion-reorder slot="start"></ion-reorder>
+                <ion-label>{{ card.identifier }}</ion-label>
+                <ion-label>{{ card.name }}</ion-label>
+                <ion-select
+                    class="size-select ion-margin-horizontal"
+                    placeholder="Size"
+                    interface="popover"
+                    [interfaceOptions]="{
+                        cssClass: 'item-card-size-popover',
+                        size: 'cover'
+                    }"
+                    [value]="card.size"
+                    (ionChange)="setCardSize(card, $any($event))"
+                >
+                    <ion-select-option
+                        *ngFor="let size of sizes"
+                        [value]="size"
+                        >{{ size }}</ion-select-option
+                    >
+                </ion-select>
+            </ion-item>
+            <ion-item-options side="end">
+                <ion-item-option color="danger" expandable
+                    >Delete</ion-item-option
+                >
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-reorder-group>
+</ion-list>

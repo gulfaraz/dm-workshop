@@ -9,7 +9,18 @@
                 <app-item-card-editor></app-item-card-editor>
             </ion-col>
             <ion-col>
-                <app-item-cards-table></app-item-cards-table>
+                <app-item-cards-controls
+                    [preview]="preview"
+                    (togglePreviewEvent)="togglePreview($event)"
+                ></app-item-cards-controls>
+                <app-item-cards-table
+                    *ngIf="!preview"
+                    [cards]="cards"
+                ></app-item-cards-table>
+                <app-item-cards-viewer
+                    *ngIf="preview"
+                    [cards]="cards"
+                ></app-item-cards-viewer>
             </ion-col>
         </ion-row>
     </ion-grid>

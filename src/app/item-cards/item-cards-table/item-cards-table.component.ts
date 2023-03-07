@@ -1,8 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ItemReorderCustomEvent, SelectCustomEvent } from '@ionic/angular';
+
+import { Card, sizes } from '../item-cards.type';
 
 @Component({
     selector: 'app-item-cards-table',
     templateUrl: './item-cards-table.component.html',
     styleUrls: ['./item-cards-table.component.scss'],
 })
-export class ItemCardsTableComponent {}
+export class ItemCardsTableComponent {
+    @Input() cards: Card[] = [];
+
+    sizes = sizes;
+
+    reorderCard(itemReorderCustomEvent: ItemReorderCustomEvent) {
+        this.cards = itemReorderCustomEvent.detail.complete(this.cards);
+    }
+
+    setCardSize = (card: Card, selectCustomEvent: SelectCustomEvent) =>
+        (card.size = selectCustomEvent.detail.value);
+}
