@@ -12,6 +12,7 @@
                 <app-item-cards-controls
                     [preview]="preview"
                     (togglePreviewEvent)="togglePreview($event)"
+                    [autoAssignSizes]="autoAssignSizes"
                 ></app-item-cards-controls>
                 <app-item-cards-table
                     *ngIf="!preview"

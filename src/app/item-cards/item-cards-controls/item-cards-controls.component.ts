@@ -7,6 +7,7 @@ import { SegmentCustomEvent } from '@ionic/angular';
 })
 export class ItemCardsControlsComponent {
     @Input() preview = false;
+    @Input() autoAssignSizes!: () => void;
     @Output() togglePreviewEvent = new EventEmitter<boolean>();
 
     togglePreview(segmentCustomEvent: SegmentCustomEvent) {

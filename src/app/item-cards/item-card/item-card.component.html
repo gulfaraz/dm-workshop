@@ -1,0 +1,24 @@
+<table>
+    <tr>
+        <td colspan="1">{{ card.identifier }}</td>
+        <td colspan="3">
+            <b>{{ card.name }}</b>
+        </td>
+    </tr>
+    <tr *ngIf="card.attunement">
+        <td colspan="4" class="attunement">{{ card.attunement }}</td>
+    </tr>
+    <tr *ngIf="card.type && card.rarity">
+        <td colspan="2">{{ card.type }}</td>
+        <td colspan="2">{{ card.rarity }}</td>
+    </tr>
+    <tr *ngIf="card.type && !card.rarity">
+        <td colspan="4">{{ card.type }}</td>
+    </tr>
+    <tr *ngIf="!card.type && card.rarity">
+        <td colspan="4">{{ card.rarity }}</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="description">{{ card.description }}</td>
+    </tr>
+</table>

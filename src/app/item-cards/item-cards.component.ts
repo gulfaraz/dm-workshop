@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Card } from './item-cards.type';
+import { Card, sizes } from './item-cards.type';
 
 @Component({
     selector: 'app-item-cards',
@@ -14,4 +14,7 @@ export class ItemCardsComponent {
 
     deleteCard = (card: Card) =>
         (this.cards = this.cards.filter((_card) => _card !== card));
+
+    autoAssignSizes = () =>
+        this.cards.forEach((card) => (card.size = sizes[0]));
 }
