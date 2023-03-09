@@ -1,9 +1,9 @@
 export interface Card {
     identifier: string;
     name: string;
-    attunement: string;
+    attunement?: string;
     type: string;
-    rarity: string;
+    rarity?: string;
     description: string;
     size: string;
 }
@@ -20,4 +20,52 @@ export const sizes = [
     '4x3',
 ];
 
-export default { sizes };
+export const cards: Card[] = [
+    {
+        identifier: '4708',
+        name: 'Potion of Healing',
+        type: 'Potion',
+        rarity: 'Common',
+        description:
+            'A character who drinks the magical red fluid in this vial regains 2d4 + 2 hit points. Drinking or administering a potion takes an action.',
+        size: sizes[0],
+    },
+    {
+        identifier: '4581',
+        name: 'Bag of Holding',
+        type: 'Wondrous Item',
+        rarity: 'Uncommon',
+        description:
+            'This bag has an interior space considerably larger than its outside dimensions, roughly 2 feet in diameter at the mouth and 4 feet deep. The bag can hold up to 500 pounds, not exceeding a volume of 64 cubic feet. The bag weighs 15 pounds, regardless of its contents. Retrieving an item from the bag requires an action.\n\nIf the bag is overloaded, pierced, or torn, it ruptures and is destroyed, and its contents are scattered in the Astral Plane. If the bag is turned inside out, its contents spill forth, unharmed, but the bag must be put right before it can be used again. Breathing creatures inside the bag can survive up to a number of minutes equal to 10 divided by the number of creatures (minimum 1 minute), after which time they begin to suffocate.\n\nPlacing a bag of holding inside an extradimensional space created by a handy haversack, portable hole, or similar item instantly destroys both items and opens a gate to the Astral Plane. The gate originates where the one item was placed inside the other. Any creature within 10 feet of the gate is sucked through it to a random location on the Astral Plane. The gate then closes. The gate is one-way only and can’t be reopened.',
+        size: sizes[5],
+    },
+    {
+        identifier: '4726',
+        name: 'Ring of Protection',
+        attunement: 'Requires attunement',
+        type: 'Ring',
+        rarity: 'Rare',
+        description:
+            'You gain a +1 bonus to AC and saving throws while wearing this ring.',
+        size: sizes[0],
+    },
+    {
+        identifier: '2418',
+        name: 'Diamond',
+        type: 'Gemstone',
+        description:
+            'A transparent blue-white, canary, pink, brown, or blue gemstone worth 5,000 gold pieces.',
+        size: sizes[0],
+    },
+    {
+        identifier: '4794',
+        name: 'Wand of Magic Missiles',
+        type: 'Wand',
+        rarity: 'Uncommon',
+        description:
+            "This wand has 7 charges. While holding it, you can use an action to expend 1 or more of its charges to cast the magic missile spell from it. For 1 charge, you cast the 1st-level version of the spell. You can increase the spell slot level by one for each additional charge you expend.\n\nThe wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.",
+        size: sizes[1],
+    },
+];
+
+export default { sizes, cards };

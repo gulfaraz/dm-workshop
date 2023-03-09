@@ -1,15 +1,6 @@
 <ion-header class="ion-margin-bottom">
     <ion-toolbar color="transparent">
-        <ion-button
-            slot="start"
-            size="small"
-            color="medium"
-            fill="outline"
-            (click)="autoAssignSizes()"
-            *ngIf="!preview"
-            >Auto-Assign Sizes</ion-button
-        >
-        <ion-button slot="end" size="small" class="ion-margin-horizontal"
+        <ion-button slot="start" size="small" class="ion-margin-horizontal"
             >Export {{ preview ? "PDF" : "Item Cards JSON" }}</ion-button
         >
         <ion-segment

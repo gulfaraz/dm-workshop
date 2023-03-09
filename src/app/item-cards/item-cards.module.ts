@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { SharedModule } from '../shared/shared.module';
@@ -16,6 +17,7 @@ import { ItemCardsService } from './item-cards.service';
     imports: [
         CommonModule,
         RouterModule.forChild([{ path: '', component: ItemCardsComponent }]),
+        FormsModule,
         IonicModule,
         SharedModule,
     ],

@@ -25,6 +25,7 @@ export class ItemCardsService {
     };
 
     getPages = (cards: Card[]) => {
+        cards.sort(this.sortCards);
         const pages: Card[][] = [];
         let cardIndex = this.findCard(cards, 4, 3);
 
@@ -36,5 +37,13 @@ export class ItemCardsService {
         }
 
         return pages;
+    };
+
+    sortCards = (cardA: Card, cardB: Card) => {
+        const cardASize = this.getCardSize(cardA);
+        const cardBSize = this.getCardSize(cardB);
+        const columnSizeDiff = cardBSize[1] - cardASize[1];
+        const rowSizeDiff = cardBSize[0] - cardASize[0];
+        return columnSizeDiff === 0 ? rowSizeDiff : columnSizeDiff;
     };
 }

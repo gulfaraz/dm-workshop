@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ItemCardsService } from '../item-cards.service';
 
+import { ItemCardsService } from '../item-cards.service';
 import { Card } from '../item-cards.type';
 
 @Component({
@@ -15,11 +15,8 @@ export class ItemCardsViewerComponent implements OnInit {
     @Input() cards: Card[] = [];
 
     sheets: Card[][] = [];
-    itemCardsService: ItemCardsService;
 
-    constructor(itemCardsService: ItemCardsService) {
-        this.itemCardsService = itemCardsService;
-    }
+    constructor(private itemCardsService: ItemCardsService) {}
 
     ngOnInit() {
         this.sheets = this.itemCardsService.getPages([...this.cards]);

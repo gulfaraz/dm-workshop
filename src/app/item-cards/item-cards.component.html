@@ -6,18 +6,21 @@
                     label="Upload Item Cards JSON"
                 ></app-json-uploader>
                 <ion-progress-bar value="1" color="light"></ion-progress-bar>
-                <app-item-card-editor></app-item-card-editor>
+                <app-item-card-editor
+                    [card]="card"
+                    (saveCardEvent)="saveCard($event)"
+                ></app-item-card-editor>
             </ion-col>
             <ion-col>
                 <app-item-cards-controls
                     [preview]="preview"
                     (togglePreviewEvent)="togglePreview($event)"
-                    [autoAssignSizes]="autoAssignSizes"
                 ></app-item-cards-controls>
                 <app-item-cards-table
                     *ngIf="!preview"
                     [cards]="cards"
                     (deleteCardEvent)="deleteCard($event)"
+                    (loadCardEvent)="loadCard($event)"
                 ></app-item-cards-table>
                 <app-item-cards-viewer
                     *ngIf="preview"

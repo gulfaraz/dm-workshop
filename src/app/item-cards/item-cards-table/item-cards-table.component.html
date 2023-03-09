@@ -4,41 +4,46 @@
         <ion-text class="text-weight-700"> Item Card Form </ion-text> or
         <ion-text class="text-weight-700"> Import Item Cards JSON </ion-text>
     </ion-note>
-    <ion-reorder-group
-        [disabled]="false"
-        (ionItemReorder)="reorderCard($any($event))"
-    >
-        <ion-item-sliding *ngFor="let card of cards">
-            <ion-item button lines="full" detail="false">
-                <ion-reorder slot="start" title="Drag to Sort"></ion-reorder>
-                <ion-label title="Identifier">{{ card.identifier }}</ion-label>
-                <ion-label title="Name">{{ card.name }}</ion-label>
-                <ion-select
-                    class="size-select ion-margin-horizontal"
-                    placeholder="Size"
-                    interface="popover"
-                    [interfaceOptions]="{
-                        cssClass: 'item-card-size-popover',
-                        size: 'cover'
-                    }"
-                    [value]="card.size"
-                    (ionChange)="setCardSize(card, $any($event))"
-                >
-                    <ion-select-option
-                        *ngFor="let size of sizes"
-                        [value]="size"
-                        >{{ size }}</ion-select-option
-                    >
-                </ion-select>
-            </ion-item>
-            <ion-item-options side="end" (ionSwipe)="deleteCard(card)">
-                <ion-item-option
-                    color="danger"
-                    expandable
-                    (click)="deleteCard(card)"
-                    >Delete</ion-item-option
-                >
-            </ion-item-options>
-        </ion-item-sliding>
-    </ion-reorder-group>
+    <ion-item-sliding *ngFor="let card of cards">
+        <ion-item button lines="full" detail="false" (click)="loadCard(card)">
+            <ion-label
+                class="identifier"
+                title="Identifier: {{ card.identifier }}"
+                >{{ card.identifier }}</ion-label
+            >
+            <ion-label class="name" title="Name: {{ card.name }}">{{
+                card.name
+            }}</ion-label>
+            <ion-label class="type" title="Type: {{ card.type }}">{{
+                card.type
+            }}</ion-label>
+            <ion-label class="rarity" title="Rarity: {{ card.rarity }}">{{
+                card.rarity
+            }}</ion-label>
+            <ion-select
+                class="size-select ion-margin-horizontal"
+                placeholder="Size"
+                interface="popover"
+                [interfaceOptions]="{
+                    cssClass: 'item-card-size-popover',
+                    size: 'cover'
+                }"
+                [value]="card.size"
+                (ionChange)="setCardSize(card, $any($event))"
+                title="Size: {{ card.size }}"
+            >
+                <ion-select-option *ngFor="let size of sizes" [value]="size">{{
+                    size
+                }}</ion-select-option>
+            </ion-select>
+        </ion-item>
+        <ion-item-options side="end" (ionSwipe)="deleteCard(card)">
+            <ion-item-option
+                color="danger"
+                expandable
+                (click)="deleteCard(card)"
+                >Delete</ion-item-option
+            >
+        </ion-item-options>
+    </ion-item-sliding>
 </ion-list>

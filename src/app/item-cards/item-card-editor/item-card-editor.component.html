@@ -1,93 +1,124 @@
 <ion-grid class="ion-margin">
-    <ion-row>
-        <ion-col size="6">
-            <ion-button
-                expand="block"
-                color="success"
-                type="submit"
-                disabled="true"
-                >Save</ion-button
-            >
-        </ion-col>
-        <ion-col size="6">
-            <ion-button
-                expand="block"
-                fill="outline"
-                color="danger"
-                type="reset"
-                disabled="true"
-                >Clear</ion-button
-            >
-        </ion-col>
-    </ion-row>
-    <ion-row mode="md">
-        <ion-col size="3">
-            <ion-item fill="outline">
-                <ion-label position="floating">Identifier</ion-label>
-                <ion-input
-                    class="ion-text-center"
-                    placeholder="000000"
-                    required="true"
-                    [debounce]="debounce"
-                ></ion-input>
-            </ion-item>
-        </ion-col>
-        <ion-col size="9">
-            <ion-item fill="outline">
-                <ion-label position="floating">Name</ion-label>
-                <ion-input
-                    class="ion-text-center"
-                    placeholder="Cloak of Billowing"
-                    required="true"
-                    [debounce]="debounce"
-                ></ion-input>
-            </ion-item>
-        </ion-col>
-        <ion-col size="12">
-            <ion-item fill="outline">
-                <ion-label position="floating">Attunement</ion-label>
-                <ion-input
-                    class="ion-text-center"
-                    placeholder="Requires attunement (leave blank if not attuneable)"
-                    required="false"
-                    [debounce]="debounce"
-                ></ion-input>
-            </ion-item>
-        </ion-col>
-        <ion-col size="6">
-            <ion-item fill="outline">
-                <ion-label position="floating">Type</ion-label>
-                <ion-input
-                    class="ion-text-center"
-                    placeholder="Wondrous Item"
-                    required="true"
-                    [debounce]="debounce"
-                ></ion-input>
-            </ion-item>
-        </ion-col>
-        <ion-col size="6">
-            <ion-item fill="outline">
-                <ion-label position="floating">Rarity</ion-label>
-                <ion-input
-                    class="ion-text-center"
-                    placeholder="Common"
-                    required="true"
-                    [debounce]="debounce"
-                ></ion-input>
-            </ion-item>
-        </ion-col>
-        <ion-col size="12">
-            <ion-item fill="outline">
-                <ion-label position="floating">Description</ion-label>
-                <ion-textarea
-                    class="ion-text-center"
-                    placeholder="While wearing this cloak, you can use a bonus action to make it billow dramatically."
-                    [autoGrow]="true"
-                    required="true"
-                    [debounce]="debounce"
+    <form
+        #itemCardEditorForm="ngForm"
+        (ngSubmit)="onSave(); itemCardEditorForm.reset()"
+    >
+        <ion-row>
+            <ion-col size="6">
+                <ion-button
+                    expand="block"
+                    color="success"
+                    type="submit"
+                    [disabled]="!itemCardEditorForm.form.valid"
+                    >Save</ion-button
                 >
-                </ion-textarea>
-            </ion-item>
-        </ion-col>
-    </ion-row>
+            </ion-col>
+            <ion-col size="6">
+                <ion-button
+                    expand="block"
+                    fill="outline"
+                    color="danger"
+                    type="reset"
+                    (clear)="onClear(); itemCardEditorForm.reset()"
+                    >Clear</ion-button
+                >
+            </ion-col>
+        </ion-row>
+        <ion-row mode="md">
+            <ion-col size="3">
+                <ion-item fill="outline">
+                    <ion-label position="floating" for="identifier"
+                        >Identifier</ion-label
+                    >
+                    <ion-input
+                        class="ion-text-center"
+                        placeholder="27040"
+                        required="true"
+                        [(ngModel)]="card.identifier"
+                        name="identifier"
+                        id="identifier"
+                        [debounce]="debounce"
+                    ></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col size="9">
+                <ion-item fill="outline">
+                    <ion-label position="floating" for="name">Name</ion-label>
+                    <ion-input
+                        class="ion-text-center"
+                        placeholder="Cloak of Billowing"
+                        required="true"
+                        [(ngModel)]="card.name"
+                        name="name"
+                        id="name"
+                        [debounce]="debounce"
+                    ></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12">
+                <ion-item fill="outline">
+                    <ion-label position="floating" for="attunement"
+                        >Attunement</ion-label
+                    >
+                    <ion-input
+                        class="ion-text-center"
+                        placeholder="Requires attunement (leave blank if not attuneable)"
+                        required="false"
+                        [(ngModel)]="card.attunement"
+                        name="attunement"
+                        id="attunement"
+                        [debounce]="debounce"
+                    ></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col size="6">
+                <ion-item fill="outline">
+                    <ion-label position="floating" for="type">Type</ion-label>
+                    <ion-input
+                        class="ion-text-center"
+                        placeholder="Wondrous Item"
+                        required="true"
+                        [(ngModel)]="card.type"
+                        name="type"
+                        id="type"
+                        [debounce]="debounce"
+                    ></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col size="6">
+                <ion-item fill="outline">
+                    <ion-label position="floating" for="rarity"
+                        >Rarity</ion-label
+                    >
+                    <ion-input
+                        class="ion-text-center"
+                        placeholder="Common"
+                        required="false"
+                        [(ngModel)]="card.rarity"
+                        name="rarity"
+                        id="rarity"
+                        [debounce]="debounce"
+                    ></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12">
+                <ion-item fill="outline">
+                    <ion-label position="floating" for="description"
+                        >Description</ion-label
+                    >
+                    <ion-textarea
+                        class="ion-text-center"
+                        placeholder="While wearing this cloak, you can use a bonus action to make it billow dramatically."
+                        [autoGrow]="true"
+                        required="true"
+                        [(ngModel)]="card.description"
+                        name="description"
+                        id="description"
+                        [debounce]="debounce"
+                    >
+                    </ion-textarea>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+    </form>
 </ion-grid>
