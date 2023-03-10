@@ -3,6 +3,7 @@
         <app-json-exporter
             *ngIf="!preview"
             label="Export Item Cards JSON"
+            [json]="cards"
         ></app-json-exporter>
         <app-pdf-exporter
             *ngIf="preview"
