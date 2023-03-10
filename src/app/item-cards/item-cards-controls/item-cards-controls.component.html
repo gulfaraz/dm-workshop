@@ -1,8 +1,13 @@
 <ion-header class="ion-margin-bottom">
     <ion-toolbar color="transparent">
-        <ion-button slot="start" size="small" class="ion-margin-horizontal"
-            >Export {{ preview ? "PDF" : "Item Cards JSON" }}</ion-button
-        >
+        <app-json-exporter
+            *ngIf="!preview"
+            label="Export Item Cards JSON"
+        ></app-json-exporter>
+        <app-pdf-exporter
+            *ngIf="preview"
+            label="Export Item Cards PDF"
+        ></app-pdf-exporter>
         <ion-segment
             class="ion-no-margin"
             [value]="preview"

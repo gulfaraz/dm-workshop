@@ -1,4 +1,17 @@
-<ion-button expand="block" fill="outline" size="large" class="ion-margin">
+<ion-button
+    expand="block"
+    fill="outline"
+    size="large"
+    class="ion-margin"
+    (click)="click()"
+>
     <ion-icon slot="start" name="push-outline"></ion-icon>
-    {{ label }}
+    <ion-label>{{ label }}</ion-label>
+    <input
+        #fileInput
+        type="file"
+        (change)="upload($event)"
+        accept="application/json"
+        class="ion-hide"
+    />
 </ion-button>

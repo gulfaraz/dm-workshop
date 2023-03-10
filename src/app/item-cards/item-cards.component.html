@@ -4,6 +4,7 @@
             <ion-col size="auto">
                 <app-json-uploader
                     label="Upload Item Cards JSON"
+                    (uploadEvent)="onUpload($event)"
                 ></app-json-uploader>
                 <ion-progress-bar value="1" color="light"></ion-progress-bar>
                 <app-item-card-editor
@@ -25,6 +26,7 @@
                 <app-item-cards-viewer
                     *ngIf="preview"
                     [cards]="cards"
+                    (loadCardEvent)="loadCard($event)"
                 ></app-item-cards-viewer>
             </ion-col>
         </ion-row>

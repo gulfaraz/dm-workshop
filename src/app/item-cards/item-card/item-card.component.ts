@@ -20,7 +20,6 @@ export class ItemCardComponent implements OnInit {
     @HostBinding('class.triple') classTriple = true;
 
     ngOnInit() {
-        console.log('this.card', this.card);
         const cardSize = this.card.size.split('x');
         this.classSmall = cardSize[0] === '1';
         this.classMedium = cardSize[0] === '2';

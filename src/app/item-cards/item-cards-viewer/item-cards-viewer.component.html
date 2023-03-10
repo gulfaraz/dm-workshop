@@ -4,6 +4,7 @@
             <app-item-card
                 [card]="card"
                 *ngFor="let card of sheet"
+                (click)="loadCard(card)"
             ></app-item-card>
         </section>
     </div>
