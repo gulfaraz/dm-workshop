@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 
+import { getExportName } from '../utils';
+
 @Component({
     selector: 'app-json-exporter',
     templateUrl: './json-exporter.component.html',
@@ -14,22 +16,12 @@ export class JsonExporterComponent {
             encodeURIComponent(JSON.stringify(this.json));
         const downloadAnchorNode = document.createElement('a');
         downloadAnchorNode.setAttribute('href', dataStr);
-        downloadAnchorNode.setAttribute('download', this.getExportName());
-        document.body.appendChild(downloadAnchorNode); // required for firefox
+        downloadAnchorNode.setAttribute(
+            'download',
+            getExportName(this.label, 'json'),
+        );
+        document.body.appendChild(downloadAnchorNode);
         downloadAnchorNode.click();
         downloadAnchorNode.remove();
-    };
-
-    getExportName = () => {
-        const prefix = this.label
-            .split(' ')
-            .map((x) => x.toLowerCase())
-            .join('_');
-        const date = new Date();
-        const timestamp = `${date.getFullYear()}_${
-            date.getMonth() + 1
-        }_${date.getDate()}_${date.getHours()}_${date.getMinutes()}_${date.getSeconds()}`;
-        const extension = 'json';
-        return `${prefix}_${timestamp}.${extension}`;
     };
 }

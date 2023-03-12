@@ -1,23 +1,17 @@
 .body {
-    padding: 0;
-    font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial,
-        sans-serif;
-    font-size: 20px;
+    padding: 5mm;
     height: 100%;
     overflow: auto;
 }
 
 .sheet {
-    margin: 5mm;
+    margin: 0;
+    padding: 1mm;
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 2mm;
-    height: 209mm;
-    border-right: 2mm solid transparent;
-    border-left: 2mm solid transparent;
-    border-top: 2mm solid transparent;
-    border-bottom: 1mm solid transparent;
+    height: 206mm;
     page-break-before: always;
 }
