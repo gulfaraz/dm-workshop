@@ -4,7 +4,7 @@
             <ion-col size="auto">
                 <app-json-uploader
                     label="Upload Item Cards JSON"
-                    (uploadEvent)="onUpload($event)"
+                    (uploadEvent)="setCards($event)"
                 ></app-json-uploader>
                 <ion-progress-bar value="1" color="light"></ion-progress-bar>
                 <app-item-card-editor

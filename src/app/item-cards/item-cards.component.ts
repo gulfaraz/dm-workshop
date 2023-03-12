@@ -10,16 +10,27 @@ export class ItemCardsComponent {
     cards: Card[] = cards;
     card = {} as Card;
     preview = false;
+    storageKey = 'item-cards';
+
+    constructor() {
+        const storedCards = localStorage.getItem(this.storageKey);
+        console.log(storedCards);
+        if (storedCards && storedCards.length > 2)
+            this.cards = JSON.parse(storedCards);
+    }
 
     togglePreview = (preview: boolean) => (this.preview = preview);
 
     saveCard = (card: Card) =>
-        (this.cards = [Object.assign({}, card), ...this.cards]);
+        this.setCards([Object.assign({}, card), ...this.cards]);
 
     loadCard = (card: Card) => (this.card = Object.assign({}, card));
 
     deleteCard = (card: Card) =>
-        (this.cards = this.cards.filter((_card) => _card !== card));
+        this.setCards(this.cards.filter((_card) => _card !== card));
 
-    onUpload = (cards: Card[]) => (this.cards = cards);
+    setCards = (cards: Card[]) => {
+        localStorage.setItem(this.storageKey, JSON.stringify(cards));
+        this.cards = cards;
+    };
 }
