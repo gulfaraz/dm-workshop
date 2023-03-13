@@ -14,7 +14,6 @@ export class ItemCardsComponent {
 
     constructor() {
         const storedCards = localStorage.getItem(this.storageKey);
-        console.log(storedCards);
         if (storedCards && storedCards.length > 2)
             this.cards = JSON.parse(storedCards);
     }

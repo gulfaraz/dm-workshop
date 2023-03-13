@@ -21,7 +21,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/dm-workshop",
+            "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -41,6 +41,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "https://gulfaraz.github.io/dm-workshop/",
               "budgets": [
                 {
                   "type": "initial",
