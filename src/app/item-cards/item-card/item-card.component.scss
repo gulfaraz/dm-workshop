@@ -3,7 +3,7 @@ $table-border: 0.6mm solid #000;
 table {
     width: 100%;
     height: 100%;
-    border-collapse: separate;
+    border-collapse: collapse;
     table-layout: fixed;
     font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial,
         sans-serif;
@@ -25,8 +25,8 @@ tr {
 
 td {
     border: $table-border;
-    border-bottom: hidden;
-    border-left: hidden;
+    border-bottom: none;
+    border-left: none;
 
     &:first-child {
         border-left: $table-border;
