@@ -1,4 +1,13 @@
-# 0.2.0 (2023-03-13)
+## [0.2.1](https://github.com/gulfaraz/dm-workshop/compare/v0.2.0...v0.2.1) (2023-03-14)
+
+
+### Bug Fixes
+
+* force equal width for item cards ([bdb671f](https://github.com/gulfaraz/dm-workshop/commit/bdb671f4ef2a017b3854921fde510e086ba57391))
+
+
+
+# [0.2.0](https://github.com/gulfaraz/dm-workshop/compare/5f878725e59f00fbad874c05a11424fd5485106b...v0.2.0) (2023-03-13)
 
 
 ### Features
