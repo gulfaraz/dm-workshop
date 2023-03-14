@@ -22,8 +22,8 @@ export class PdfExporterComponent {
             await doc.html(htmlElements[i], {
                 callback: (doc) =>
                     i + 1 < htmlElements.length ? doc.insertPage(1) : doc,
-                width: 299,
-                windowWidth: 1110,
+                width: 297,
+                windowWidth: 1122.52,
             });
         }
 
