@@ -1,0 +1,96 @@
+<ion-grid class="ion-margin">
+    <form #combatTokenEditorForm="ngForm" (ngSubmit)="onSave()">
+        <ion-row mode="md">
+            <ion-col size="12">
+                <ion-item fill="outline" class="token-preview">
+                    <ion-label position="floating" for="preview"
+                        >Preview</ion-label
+                    >
+                    <div
+                        class="token"
+                        [ngClass]="token.size.toLowerCase()"
+                        [style.background-image]="'url(' + token.image + ')'"
+                        [style.border-color]="token.colour"
+                        [style.background-size]="token.zoom + '%'"
+                    ></div>
+                    <ion-input class="ion-hide" value=" "></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12">
+                <ion-item fill="outline">
+                    <ion-label position="floating" for="identifier"
+                        >Image</ion-label
+                    >
+                    <ion-input
+                        class="ion-text-center"
+                        placeholder="https://path.to/image.png"
+                        [(ngModel)]="token.image"
+                        name="image"
+                        id="image"
+                        required="true"
+                        [debounce]="debounce"
+                    ></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col size="6">
+                <ion-item fill="outline">
+                    <ion-label position="floating" for="colour">Size</ion-label>
+                    <ion-select
+                        mode="ios"
+                        placeholder="Size"
+                        interface="popover"
+                        [(ngModel)]="token.size"
+                        name="size"
+                        id="size"
+                        required="true"
+                    >
+                        <ion-select-option
+                            *ngFor="let size of sizes"
+                            [value]="size"
+                            >{{ size }}</ion-select-option
+                        >
+                    </ion-select>
+                </ion-item>
+            </ion-col>
+            <ion-col size="6">
+                <ion-item fill="outline">
+                    <ion-label position="floating" for="colour"
+                        >Colour</ion-label
+                    >
+                    <ion-input
+                        class="ion-text-center"
+                        placeholder="#000000"
+                        [(ngModel)]="token.colour"
+                        name="colour"
+                        id="colour"
+                        required="true"
+                        [debounce]="debounce"
+                    ></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12">
+                <ion-item fill="outline">
+                    <ion-label position="floating" for="zoom">Zoom</ion-label>
+                    <ion-range
+                        mode="ios"
+                        class="token-zoom"
+                        [(ngModel)]="token.zoom"
+                        name="zoom"
+                        id="zoom"
+                        required="true"
+                        pin="true"
+                    ></ion-range>
+                </ion-item>
+            </ion-col>
+            <ion-col size="12">
+                <ion-button
+                    expand="block"
+                    color="success"
+                    type="submit"
+                    [disabled]="!combatTokenEditorForm.form.valid"
+                    >Save</ion-button
+                >
+            </ion-col>
+        </ion-row>
+    </form>
+</ion-grid>

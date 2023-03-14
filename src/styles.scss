@@ -32,6 +32,11 @@ ion-input {
     --padding-bottom: 0 !important;
 }
 
+ion-select {
+    position: relative;
+    top: -8px;
+}
+
 .item-card-size-popover {
     ion-item {
         --border-width: 0 0 0.55px 0;
