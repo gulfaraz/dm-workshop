@@ -1,4 +1,4 @@
-import { Component, HostBinding, Input, OnInit } from '@angular/core';
+import { Component, HostBinding, Input } from '@angular/core';
 
 import { Card } from '../item-cards.type';
 
@@ -7,26 +7,31 @@ import { Card } from '../item-cards.type';
     templateUrl: './item-card.component.html',
     styleUrls: ['./item-card.component.scss'],
 })
-export class ItemCardComponent implements OnInit {
+export class ItemCardComponent {
     @Input() card!: Card;
 
-    @HostBinding('class.card') classCard = true;
-    @HostBinding('class.small') classSmall = true;
-    @HostBinding('class.medium') classMedium = true;
-    @HostBinding('class.large') classLarge = true;
-    @HostBinding('class.xlarge') classXLarge = true;
-    @HostBinding('class.single') classSingle = true;
-    @HostBinding('class.double') classDouble = true;
-    @HostBinding('class.triple') classTriple = true;
-
-    ngOnInit() {
+    @HostBinding('class') get classes() {
         const cardSize = this.card.size.split('x');
-        this.classSmall = cardSize[0] === '1';
-        this.classMedium = cardSize[0] === '2';
-        this.classLarge = cardSize[0] === '3';
-        this.classXLarge = cardSize[0] === '4';
-        this.classSingle = cardSize[1] === '1';
-        this.classDouble = cardSize[1] === '2';
-        this.classTriple = cardSize[1] === '3';
+        const classes: string[] = [];
+
+        if (cardSize[0] === '1') {
+            classes.push('small');
+        } else if (cardSize[0] === '2') {
+            classes.push('medium');
+        } else if (cardSize[0] === '3') {
+            classes.push('large');
+        } else if (cardSize[0] === '4') {
+            classes.push('xlarge');
+        }
+
+        if (cardSize[1] === '1') {
+            classes.push('single');
+        } else if (cardSize[1] === '2') {
+            classes.push('double');
+        } else if (cardSize[1] === '3') {
+            classes.push('triple');
+        }
+
+        return classes;
     }
 }

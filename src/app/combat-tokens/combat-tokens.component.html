@@ -13,16 +13,13 @@
                 ></app-combat-token-editor>
             </ion-col>
             <ion-col>
-                <!-- <app-combat-tokens-controls
-                    [preview]="preview"
-                    (togglePreviewEvent)="togglePreview($event)"
+                <app-combat-tokens-controls
                     [tokens]="tokens"
                 ></app-combat-tokens-controls>
                 <app-combat-tokens-viewer
-                    *ngIf="preview"
                     [tokens]="tokens"
-                    (loadTokenEvent)="loadToken($event)"
-                ></app-combat-tokens-viewer> -->
+                    (deleteTokenEvent)="deleteToken($event)"
+                ></app-combat-tokens-viewer>
             </ion-col>
         </ion-row>
     </ion-grid>

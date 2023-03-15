@@ -5,10 +5,7 @@ import { Token, sizes } from '../combat-tokens.type';
 @Component({
     selector: 'app-combat-token-editor',
     templateUrl: './combat-token-editor.component.html',
-    styleUrls: [
-        './combat-token-editor-token.component.scss',
-        './combat-token-editor.component.scss',
-    ],
+    styleUrls: ['./combat-token-editor.component.scss'],
 })
 export class CombatTokenEditorComponent {
     @Input() token: Token = {} as Token;

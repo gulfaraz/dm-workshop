@@ -10,8 +10,9 @@
                     color="success"
                     type="submit"
                     [disabled]="!itemCardEditorForm.form.valid"
-                    >Save</ion-button
                 >
+                    Save
+                </ion-button>
             </ion-col>
             <ion-col size="6">
                 <ion-button
@@ -20,16 +21,17 @@
                     color="danger"
                     type="reset"
                     (clear)="onClear(); itemCardEditorForm.reset()"
-                    >Clear</ion-button
                 >
+                    Clear
+                </ion-button>
             </ion-col>
         </ion-row>
         <ion-row mode="md">
             <ion-col size="3">
                 <ion-item fill="outline">
-                    <ion-label position="floating" for="identifier"
-                        >Identifier</ion-label
-                    >
+                    <ion-label position="floating" for="identifier">
+                        Identifier
+                    </ion-label>
                     <ion-input
                         class="ion-text-center"
                         placeholder="27040"
@@ -57,9 +59,9 @@
             </ion-col>
             <ion-col size="12">
                 <ion-item fill="outline">
-                    <ion-label position="floating" for="attunement"
-                        >Attunement</ion-label
-                    >
+                    <ion-label position="floating" for="attunement">
+                        Attunement
+                    </ion-label>
                     <ion-input
                         class="ion-text-center"
                         placeholder="Requires attunement (leave blank if not attuneable)"
@@ -87,9 +89,9 @@
             </ion-col>
             <ion-col size="6">
                 <ion-item fill="outline">
-                    <ion-label position="floating" for="rarity"
-                        >Rarity</ion-label
-                    >
+                    <ion-label position="floating" for="rarity">
+                        Rarity
+                    </ion-label>
                     <ion-input
                         class="ion-text-center"
                         placeholder="Common"
@@ -103,9 +105,9 @@
             </ion-col>
             <ion-col size="12">
                 <ion-item fill="outline">
-                    <ion-label position="floating" for="description"
-                        >Description</ion-label
-                    >
+                    <ion-label position="floating" for="description">
+                        Description
+                    </ion-label>
                     <ion-textarea
                         class="ion-text-center"
                         placeholder="While wearing this cloak, you can use a bonus action to make it billow dramatically."

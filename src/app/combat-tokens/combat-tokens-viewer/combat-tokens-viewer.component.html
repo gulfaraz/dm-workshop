@@ -1,0 +1,11 @@
+<ion-content>
+    <div class="body A4 landscape">
+        <section class="sheet combat-tokens-sheet" *ngFor="let sheet of sheets">
+            <app-combat-token
+                [token]="token"
+                *ngFor="let token of sheet"
+                (click)="deleteToken(token)"
+            ></app-combat-token>
+        </section>
+    </div>
+</ion-content>

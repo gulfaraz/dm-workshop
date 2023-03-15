@@ -1,9 +1,9 @@
 .sheet {
-    --rows: 4;
-    --columns: 3;
-    --gap: 2mm;
+    --rows: 16;
+    --columns: 23;
+    --gap: 0mm;
     margin: 0;
-    padding: 1mm;
+    padding: 4.75mm 5mm;
     display: grid;
     grid-auto-flow: column;
     grid-template-rows: repeat(

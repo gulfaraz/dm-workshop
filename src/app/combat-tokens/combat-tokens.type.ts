@@ -5,7 +5,14 @@ export interface Token {
     zoom: number;
 }
 
-export const sizes = ['Tiny', 'Small', 'Medium', 'Large', 'Huge', 'Gargantuan'];
+export const sizes = {
+    Tiny: '1x1',
+    Small: '2x2',
+    Medium: '2x2',
+    Large: '4x4',
+    Huge: '6x6',
+    Gargantuan: '8x8',
+};
 
 export const colours = [
     '#999999',
@@ -21,7 +28,7 @@ export const colours = [
 export const tokens: Token[] = [
     {
         image: 'https://www.dndbeyond.com/avatars/thumbnails/30783/955/1000/1000/638062024584880857.png',
-        size: sizes[2],
+        size: Object.keys(sizes)[1],
         colour: colours[2],
         zoom: 69,
     },
