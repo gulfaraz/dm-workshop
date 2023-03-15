@@ -52,3 +52,8 @@
         grid-column: span 8;
     }
 }
+
+.sheet > :host:hover {
+    cursor: pointer;
+    filter: saturate(0);
+}

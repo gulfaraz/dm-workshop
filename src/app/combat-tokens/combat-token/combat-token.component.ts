@@ -1,10 +1,4 @@
-import {
-    Component,
-    EventEmitter,
-    HostBinding,
-    Input,
-    Output,
-} from '@angular/core';
+import { Component, HostBinding, Input } from '@angular/core';
 
 import { Token } from '../combat-tokens.type';
 
@@ -15,7 +9,6 @@ import { Token } from '../combat-tokens.type';
 })
 export class CombatTokenComponent {
     @Input() token!: Token;
-    @Output() deleteTokenEvent = new EventEmitter<Token>();
 
     @HostBinding('class') get class() {
         return this.token.size.toLowerCase();
@@ -29,6 +22,4 @@ export class CombatTokenComponent {
     @HostBinding('style.background-size') get backgroundSize() {
         return `${this.token.zoom}%`;
     }
-
-    onDelete = () => this.deleteTokenEvent.emit(this.token);
 }
