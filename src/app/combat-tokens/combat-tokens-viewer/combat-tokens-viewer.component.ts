@@ -15,6 +15,7 @@ import { CombatTokensService } from '../combat-tokens.service';
     templateUrl: './combat-tokens-viewer.component.html',
     styleUrls: [
         '../../shared/paper-css.component.scss',
+        '../combat-token.component.scss',
         './combat-tokens-viewer.component.scss',
     ],
 })

@@ -1,8 +1,12 @@
+.body {
+    padding: 0;
+}
+
 .sheet {
     --rows: 16;
     --columns: 23;
-    --gap: 0mm;
-    margin: 0;
+    --gap: 5mm;
+    margin: 5mm;
     padding: 4.75mm 5mm;
     display: grid;
     grid-auto-flow: column;
@@ -19,4 +23,9 @@
     align-items: center;
     justify-items: center;
     page-break-before: always;
+}
+
+.token:hover {
+    cursor: pointer;
+    filter: saturate(0);
 }

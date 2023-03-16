@@ -6,7 +6,12 @@
                     <ion-label position="floating" for="preview">
                         Preview
                     </ion-label>
-                    <app-combat-token [token]="token"></app-combat-token>
+                    <div
+                        [class]="['token', token.size.toLowerCase()]"
+                        [style.background-image]="'url(' + token.image + ')'"
+                        [style.border-color]="token.colour"
+                        [style.background-size]="token.zoom + '%'"
+                    ></div>
                     <ion-input
                         class="ion-hide"
                         value=" "

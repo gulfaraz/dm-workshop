@@ -1,11 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { jsPDF } from 'jspdf';
 
-import { getExportName } from '../utils';
+import { getExportName } from './utils';
 
 @Component({
     selector: 'app-pdf-exporter',
-    templateUrl: './pdf-exporter.component.html',
+    templateUrl: './exporter.component.html',
 })
 export class PdfExporterComponent {
     @Input() label = 'Export PDF';
@@ -14,7 +14,7 @@ export class PdfExporterComponent {
     export = async () => {
         const htmlElements = Array.from<HTMLElement>(
             document.querySelectorAll(this.sheetSelector),
-        );
+        ).reverse();
 
         const doc = new jsPDF({ orientation: 'landscape' });
 

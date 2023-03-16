@@ -1,4 +1,4 @@
-:host {
+.token {
     background-color: #ffffff;
     background-size: contain;
     background-repeat: no-repeat;
@@ -51,9 +51,4 @@
         grid-row: span 8;
         grid-column: span 8;
     }
-}
-
-.sheet > :host:hover {
-    cursor: pointer;
-    filter: saturate(0);
 }
