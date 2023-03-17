@@ -14,7 +14,7 @@ import { Card } from '../item-cards.type';
     selector: 'app-item-cards-viewer',
     templateUrl: './item-cards-viewer.component.html',
     styleUrls: [
-        './item-cards-viewer-paper-css.component.scss',
+        '../../shared/paper-css.component.scss',
         './item-cards-viewer.component.scss',
     ],
 })
@@ -26,12 +26,12 @@ export class ItemCardsViewerComponent implements OnChanges {
 
     constructor(private itemCardsService: ItemCardsService) {}
 
-    loadSheets = () =>
-        (this.sheets = this.itemCardsService.getPages([...this.cards]));
-
     ngOnChanges(changes: SimpleChanges) {
         if ('cards' in changes) this.loadSheets();
     }
+
+    loadSheets = () =>
+        (this.sheets = this.itemCardsService.getSheets([...this.cards]));
 
     loadCard = (card: Card) => this.loadCardEvent.emit(card);
 }

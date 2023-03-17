@@ -1,0 +1,17 @@
+.body {
+    padding: 0;
+}
+
+.sheet {
+    --rows: 16;
+    --columns: 23;
+    --gap: 5mm;
+    margin: 5mm;
+    padding: 4.75mm 5mm;
+    grid-auto-flow: row;
+}
+
+.token:hover {
+    cursor: pointer;
+    filter: saturate(0);
+}
