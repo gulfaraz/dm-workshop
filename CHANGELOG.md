@@ -1,3 +1,18 @@
+# [0.3.0](https://github.com/gulfaraz/dm-workshop/compare/v0.2.1...v0.3.0) (2023-03-17)
+
+
+### Features
+
+* combat token editor ([d042f89](https://github.com/gulfaraz/dm-workshop/commit/d042f894d52748d41b69a264f1afe746bcc6d798))
+* combat token viewer ([e1151d5](https://github.com/gulfaraz/dm-workshop/commit/e1151d535d6f46bba9fdd59025a48b64024f6b61))
+* default combat tokens ([c0bde77](https://github.com/gulfaraz/dm-workshop/commit/c0bde77a8f269054c1056bff7d126f4513a2bba1))
+* delete on click ([96ba916](https://github.com/gulfaraz/dm-workshop/commit/96ba9162aa7df033300e1f6b84133225a2bdd4d3))
+* export combat tokens as html ([229ce7b](https://github.com/gulfaraz/dm-workshop/commit/229ce7b8808750a4181449d03c1a6c007cb813dd))
+* link to alignment tracker and github ([2d244cf](https://github.com/gulfaraz/dm-workshop/commit/2d244cf3fb1ae31e1c42c60a833e2c7eece38452))
+* row and column orientation for sheet service ([8e4cd50](https://github.com/gulfaraz/dm-workshop/commit/8e4cd50651ff172c4f5d4aabd589ac9f0d4dd847))
+
+
+
 ## [0.2.1](https://github.com/gulfaraz/dm-workshop/compare/v0.2.0...v0.2.1) (2023-03-14)
 
 
