@@ -4,9 +4,14 @@ export const getExportName = (label: string, extension: string) => {
         .map((x) => x.toLowerCase())
         .join('_');
     const date = new Date();
-    const timestamp = `${date.getFullYear()}_${
-        date.getMonth() + 1
-    }_${date.getDate()}_${date.getHours()}_${date.getMinutes()}_${date.getSeconds()}`;
+    const timestamp = [
+        date.getFullYear(),
+        date.getMonth() + 1,
+        date.getDate(),
+        date.getHours(),
+        date.getMinutes(),
+        date.getSeconds(),
+    ].join('');
     return `${prefix}_${timestamp}.${extension}`;
 };
 

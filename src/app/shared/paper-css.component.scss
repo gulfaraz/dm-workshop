@@ -17,7 +17,20 @@
     overflow: hidden;
     position: relative;
     box-sizing: border-box;
-    page-break-after: always;
+    display: grid;
+    grid-template-rows: repeat(
+        var(--rows),
+        calc((100% - (var(--gap) * (var(--rows) - 1))) / var(--rows))
+    );
+    grid-template-columns: repeat(
+        var(--columns),
+        calc((100% - (var(--gap) * (var(--columns) - 1))) / var(--columns))
+    );
+    gap: var(--gap);
+    height: 209.81mm;
+    align-items: center;
+    justify-items: center;
+    page-break-before: always;
 }
 
 /** Paper sizes **/

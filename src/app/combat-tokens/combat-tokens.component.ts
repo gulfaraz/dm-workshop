@@ -8,7 +8,7 @@ import { Token, tokens } from './combat-tokens.type';
 })
 export class CombatTokensComponent {
     tokens: Token[] = tokens;
-    token = tokens[0];
+    token = Object.assign({}, tokens[0]);
     storageKey = 'combat-tokens';
 
     constructor() {

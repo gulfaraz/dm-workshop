@@ -22,8 +22,20 @@ export abstract class SheetService<T> {
             const entity = entities.splice(entityIndex, 1)[0];
             sheet.push(entity);
             const entitySize = this.getEntitySize(entity);
-            this.fillSheet(sheet, entities, x - entitySize[0], entitySize[1]);
-            this.fillSheet(sheet, entities, x, y - entitySize[1]);
+
+            let sheetAX = x - entitySize[0];
+            let sheetAY = entitySize[1];
+            let sheetBX = x;
+            let sheetBY = y - entitySize[1];
+            if (this.columns > this.rows) {
+                sheetAX = entitySize[0];
+                sheetAY = y - entitySize[1];
+                sheetBX = x - entitySize[0];
+                sheetBY = y;
+            }
+
+            this.fillSheet(sheet, entities, sheetAX, sheetAY);
+            this.fillSheet(sheet, entities, sheetBX, sheetBY);
         }
 
         return [sheet, entities];
