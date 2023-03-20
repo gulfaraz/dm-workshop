@@ -2,10 +2,14 @@
     <ion-grid>
         <ion-row>
             <ion-col size="auto">
-                <app-json-uploader
-                    label="Upload Item Cards JSON"
-                    (uploadEvent)="setCards($event)"
-                ></app-json-uploader>
+                <app-json-importer
+                    label="Import Item Cards JSON"
+                    expand="block"
+                    fill="outline"
+                    size="large"
+                    classes="ion-margin"
+                    (importEvent)="setCards($event)"
+                ></app-json-importer>
                 <ion-progress-bar value="1" color="light"></ion-progress-bar>
                 <app-item-card-editor
                     [card]="card"
