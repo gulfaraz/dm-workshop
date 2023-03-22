@@ -1,3 +1,14 @@
+# [0.4.0](https://github.com/gulfaraz/dm-workshop/compare/v0.3.0...v0.4.0) (2023-03-22)
+
+
+### Features
+
+* alignment tracker ([2f84b52](https://github.com/gulfaraz/dm-workshop/commit/2f84b52a8456ea11d3ceba89941cf238ac789a79))
+* change uploader to importer ([8b9237e](https://github.com/gulfaraz/dm-workshop/commit/8b9237ef6dfb591657dbd8706a1de53b5df1d5cd))
+* combat token sets ([ba2713c](https://github.com/gulfaraz/dm-workshop/commit/ba2713c32ad82cda054e25e00ce09d54641e5131))
+
+
+
 # [0.3.0](https://github.com/gulfaraz/dm-workshop/compare/v0.2.1...v0.3.0) (2023-03-17)
 
 
