@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 import { Token, sizes } from '../combat-tokens.type';
+import config from '../../shared/config';
 
 @Component({
     selector: 'app-combat-token-editor',
@@ -14,7 +15,7 @@ export class CombatTokenEditorComponent {
     @Input() token: Token = {} as Token;
     @Output() saveTokenEvent = new EventEmitter<Token>();
 
-    debounce = 100;
+    debounce = config.debounce;
     sizes = sizes;
 
     onSave = () => this.saveTokenEvent.emit(this.token);

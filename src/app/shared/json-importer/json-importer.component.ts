@@ -8,17 +8,21 @@ import {
 } from '@angular/core';
 
 @Component({
-    selector: 'app-json-uploader',
-    templateUrl: './json-uploader.component.html',
+    selector: 'app-json-importer',
+    templateUrl: './json-importer.component.html',
 })
-export class JsonUploaderComponent<T> {
+export class JsonImporterComponent<T> {
     @ViewChild('fileInput') fileInput!: ElementRef;
-    @Input() label = 'Upload JSON';
-    @Output() uploadEvent = new EventEmitter<T>();
+    @Input() label = 'Import JSON';
+    @Input() expand = '';
+    @Input() fill = 'solid';
+    @Input() size = 'small';
+    @Input() classes = '';
+    @Output() importEvent = new EventEmitter<T>();
 
     click = () => this.fileInput.nativeElement.click();
 
-    upload = (event: Event) => {
+    import = (event: Event) => {
         const files = (<HTMLInputElement>event.target).files;
         if (files?.length) this.readFile(files[0]);
     };
@@ -26,7 +30,7 @@ export class JsonUploaderComponent<T> {
     readFile = (file: File) => {
         const fileReader = new FileReader();
         fileReader.onload = () =>
-            this.uploadEvent.emit(JSON.parse(String(fileReader.result)));
+            this.importEvent.emit(JSON.parse(String(fileReader.result)));
         fileReader.readAsText(file);
     };
 }

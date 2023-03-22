@@ -1,16 +1,24 @@
 <ion-content class="ion-padding">
     <ion-grid>
         <ion-row>
-            <ion-col size="auto">
-                <app-json-uploader
-                    label="Upload Combat Tokens JSON"
-                    (uploadEvent)="setTokens($event)"
-                ></app-json-uploader>
+            <ion-col>
+                <app-json-importer
+                    label="Import Combat Tokens JSON"
+                    expand="block"
+                    fill="outline"
+                    size="large"
+                    classes="ion-margin"
+                    (importEvent)="setTokens($event)"
+                ></app-json-importer>
                 <ion-progress-bar value="1" color="light"></ion-progress-bar>
                 <app-combat-token-editor
                     [token]="token"
                     (saveTokenEvent)="saveToken($event)"
                 ></app-combat-token-editor>
+                <ion-progress-bar value="1" color="light"></ion-progress-bar>
+                <app-combat-token-sets
+                    (loadTokenSetEvent)="loadTokenSet($event)"
+                ></app-combat-token-sets>
             </ion-col>
             <ion-col>
                 <app-combat-tokens-controls

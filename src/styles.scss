@@ -37,6 +37,10 @@ ion-select {
     top: -8px;
 }
 
+ion-card {
+    box-shadow: none;
+}
+
 .item-card-size-popover {
     ion-item {
         --border-width: 0 0 0.55px 0;
@@ -46,4 +50,35 @@ ion-select {
         overflow: visible;
         text-indent: 12px;
     }
+}
+
+path {
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
+circle {
+    cursor: pointer;
+}
+
+.tooltip {
+    position: absolute;
+    padding: 0.5rem;
+    background: #313639;
+    color: #f9f9f9;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+    font-size: 0.7rem;
+    z-index: 1;
+    opacity: 0;
 }
