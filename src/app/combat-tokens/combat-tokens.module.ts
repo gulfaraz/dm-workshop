@@ -9,6 +9,7 @@ import { CombatTokensComponent } from './combat-tokens.component';
 import { CombatTokenEditorComponent } from './combat-token-editor/combat-token-editor.component';
 import { CombatTokensControlsComponent } from './combat-tokens-controls/combat-tokens-controls.component';
 import { CombatTokensViewerComponent } from './combat-tokens-viewer/combat-tokens-viewer.component';
+import { CombatTokenSetsComponent } from './combat-token-sets/combat-token-sets.component';
 import { CombatTokensService } from './combat-tokens.service';
 
 @NgModule({
@@ -24,12 +25,14 @@ import { CombatTokensService } from './combat-tokens.service';
         CombatTokenEditorComponent,
         CombatTokensControlsComponent,
         CombatTokensViewerComponent,
+        CombatTokenSetsComponent,
     ],
     exports: [
         CombatTokensComponent,
         CombatTokenEditorComponent,
         CombatTokensControlsComponent,
         CombatTokensViewerComponent,
+        CombatTokenSetsComponent,
     ],
     providers: [CombatTokensService],
 })

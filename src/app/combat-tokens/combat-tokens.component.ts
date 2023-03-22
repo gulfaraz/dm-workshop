@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
 
-import { Token, tokens } from './combat-tokens.type';
+import { Token } from './combat-tokens.type';
+import { tokenSets } from './combat-token-sets/combat-token.sets';
 
 @Component({
     selector: 'app-combat-tokens',
     templateUrl: './combat-tokens.component.html',
 })
 export class CombatTokensComponent {
-    tokens: Token[] = tokens;
-    token = Object.assign({}, tokens[0]);
+    tokens: Token[] = tokenSets['Diverse'];
+    token = Object.assign({}, this.tokens[0]);
     storageKey = 'combat-tokens';
 
     constructor() {
@@ -27,4 +28,7 @@ export class CombatTokensComponent {
         localStorage.setItem(this.storageKey, JSON.stringify(tokens));
         this.tokens = tokens;
     };
+
+    loadTokenSet = (tokenSetName: string) =>
+        this.setTokens(tokenSetName ? tokenSets[tokenSetName] : []);
 }

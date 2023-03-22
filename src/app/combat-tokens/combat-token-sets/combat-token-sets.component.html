@@ -1,0 +1,23 @@
+<ion-grid>
+    <ion-row>
+        <ion-col>
+            <ion-button
+                expand="block"
+                fill="outline"
+                color="danger"
+                (click)="loadTokenSet()"
+                >Clear</ion-button
+            >
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col *ngFor="let tokenSetName of tokenSetNames">
+            <ion-button
+                expand="block"
+                fill="outline"
+                (click)="loadTokenSet(tokenSetName)"
+                >{{ tokenSetName }}</ion-button
+            >
+        </ion-col>
+    </ion-row>
+</ion-grid>

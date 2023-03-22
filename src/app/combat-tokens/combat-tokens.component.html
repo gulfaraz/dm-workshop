@@ -1,7 +1,7 @@
 <ion-content class="ion-padding">
     <ion-grid>
         <ion-row>
-            <ion-col size="auto">
+            <ion-col>
                 <app-json-importer
                     label="Import Combat Tokens JSON"
                     expand="block"
@@ -15,6 +15,10 @@
                     [token]="token"
                     (saveTokenEvent)="saveToken($event)"
                 ></app-combat-token-editor>
+                <ion-progress-bar value="1" color="light"></ion-progress-bar>
+                <app-combat-token-sets
+                    (loadTokenSetEvent)="loadTokenSet($event)"
+                ></app-combat-token-sets>
             </ion-col>
             <ion-col>
                 <app-combat-tokens-controls

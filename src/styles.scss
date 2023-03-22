@@ -37,6 +37,10 @@ ion-select {
     top: -8px;
 }
 
+ion-card {
+    box-shadow: none;
+}
+
 .item-card-size-popover {
     ion-item {
         --border-width: 0 0 0.55px 0;
