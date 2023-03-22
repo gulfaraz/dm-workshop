@@ -3,13 +3,12 @@
         <app-json-importer
             slot="start"
             label="Import Characters JSON"
-            (importEvent)="setCharacters($event)"
+            (importEvent)="import($event)"
         ></app-json-importer>
         <app-json-exporter
             slot="end"
             label="Export Characters JSON"
             [json]="characters"
         ></app-json-exporter>
-        <ion-progress-bar value="1" color="light"></ion-progress-bar>
     </ion-toolbar>
 </ion-header>

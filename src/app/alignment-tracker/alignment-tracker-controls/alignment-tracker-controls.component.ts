@@ -1,15 +1,15 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
-import { Character } from '../alignment-tracker.type';
+import { Character } from '../alignment-tracker.character';
 
 @Component({
     selector: 'app-alignment-tracker-controls',
     templateUrl: './alignment-tracker-controls.component.html',
 })
 export class AlignmentTrackerControlsComponent {
-    @Input() characters: Character[] = [];
+    @Input() characters!: Character[];
+    @Output() importCharactersEvent = new EventEmitter<Character[]>();
 
-    setCharacters = (characters: Character[]) => {
-        console.log('characters', characters);
-    };
+    import = (characters: Character[]) =>
+        this.importCharactersEvent.emit(characters);
 }
