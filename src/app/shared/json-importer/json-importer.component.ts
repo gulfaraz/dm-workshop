@@ -22,9 +22,10 @@ export class JsonImporterComponent<T> {
 
     click = () => this.fileInput.nativeElement.click();
 
-    import = (event: Event) => {
-        const files = (<HTMLInputElement>event.target).files;
+    import = () => {
+        const files = this.fileInput.nativeElement.files;
         if (files?.length) this.readFile(files[0]);
+        this.fileInput.nativeElement.value = '';
     };
 
     readFile = (file: File) => {
