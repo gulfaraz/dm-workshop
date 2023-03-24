@@ -32,7 +32,7 @@ ion-input {
     --padding-bottom: 0 !important;
 }
 
-ion-select {
+.md ion-select {
     position: relative;
     top: -8px;
 }
@@ -48,7 +48,6 @@ ion-card {
         --inner-border-width: 0;
         --show-inset-highlight: 0;
         overflow: visible;
-        text-indent: 12px;
     }
 }
 
