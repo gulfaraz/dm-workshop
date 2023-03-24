@@ -1,3 +1,12 @@
+## [0.4.2](https://github.com/gulfaraz/dm-workshop/compare/v0.4.1...v0.4.2) (2023-03-24)
+
+
+### Bug Fixes
+
+* select styling and item cards table overflow ([5cebf51](https://github.com/gulfaraz/dm-workshop/commit/5cebf5181c1527bca55ca131e84109a3f3017653))
+
+
+
 ## [0.4.1](https://github.com/gulfaraz/dm-workshop/compare/v0.4.0...v0.4.1) (2023-03-24)
 
 
