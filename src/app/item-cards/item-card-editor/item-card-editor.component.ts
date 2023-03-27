@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
-import { Card } from '../item-cards.type';
+import { Card, sizes } from '../item-cards.type';
 import config from '../../shared/config';
 
 @Component({
@@ -9,12 +9,12 @@ import config from '../../shared/config';
     styleUrls: ['./item-card-editor.component.scss'],
 })
 export class ItemCardEditorComponent {
-    @Input() card: Card = {} as Card;
+    @Input() card!: Card;
     @Output() saveCardEvent = new EventEmitter<Card>();
 
     debounce = config.debounce;
 
-    onClear = () => (this.card = {} as Card);
+    onClear = () => (this.card = { size: sizes[0] } as Card);
 
     onSave = () => this.saveCardEvent.emit(this.card);
 }

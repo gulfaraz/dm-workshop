@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Card, cards } from './item-cards.type';
+import { Card, cards, sizes } from './item-cards.type';
 
 @Component({
     selector: 'app-item-cards',
@@ -8,7 +8,7 @@ import { Card, cards } from './item-cards.type';
 })
 export class ItemCardsComponent {
     cards: Card[] = cards;
-    card = {} as Card;
+    card = { size: sizes[0] } as Card;
     preview = false;
     storageKey = 'item-cards';
 
