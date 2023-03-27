@@ -1,3 +1,12 @@
+## [0.4.3](https://github.com/gulfaraz/dm-workshop/compare/v0.4.2...v0.4.3) (2023-03-27)
+
+
+### Bug Fixes
+
+* reset item card size on save and clear ([4fd079a](https://github.com/gulfaraz/dm-workshop/commit/4fd079a2b1610d9375fd306ed3705d71f7404635))
+
+
+
 ## [0.4.2](https://github.com/gulfaraz/dm-workshop/compare/v0.4.1...v0.4.2) (2023-03-24)
 
 
