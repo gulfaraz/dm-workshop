@@ -1,7 +1,7 @@
 <ion-grid class="ion-margin">
     <form
         #itemCardEditorForm="ngForm"
-        (ngSubmit)="onSave(); itemCardEditorForm.reset()"
+        (ngSubmit)="onSave(); onClear(); itemCardEditorForm.reset()"
     >
         <ion-row>
             <ion-col size="6">
@@ -20,7 +20,7 @@
                     fill="outline"
                     color="danger"
                     type="reset"
-                    (clear)="onClear(); itemCardEditorForm.reset()"
+                    (click)="onClear(); itemCardEditorForm.reset()"
                 >
                     Clear
                 </ion-button>
