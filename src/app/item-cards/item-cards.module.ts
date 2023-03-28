@@ -11,6 +11,7 @@ import { ItemCardEditorComponent } from './item-card-editor/item-card-editor.com
 import { ItemCardsTableComponent } from './item-cards-table/item-cards-table.component';
 import { ItemCardsViewerComponent } from './item-cards-viewer/item-cards-viewer.component';
 import { ItemCardComponent } from './item-card/item-card.component';
+import { ItemCardSetsComponent } from './item-card-sets/item-card-sets.component';
 import { ItemCardsService } from './item-cards.service';
 
 @NgModule({
@@ -28,6 +29,7 @@ import { ItemCardsService } from './item-cards.service';
         ItemCardsTableComponent,
         ItemCardsViewerComponent,
         ItemCardComponent,
+        ItemCardSetsComponent,
     ],
     exports: [
         ItemCardsComponent,
@@ -36,6 +38,7 @@ import { ItemCardsService } from './item-cards.service';
         ItemCardsTableComponent,
         ItemCardsViewerComponent,
         ItemCardComponent,
+        ItemCardSetsComponent,
     ],
     providers: [ItemCardsService],
 })

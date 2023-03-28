@@ -5,18 +5,18 @@
                 expand="block"
                 fill="outline"
                 color="danger"
-                (click)="loadTokenSet()"
-                >Clear Tokens</ion-button
+                (click)="loadCardSet()"
+                >Clear Items</ion-button
             >
         </ion-col>
     </ion-row>
     <ion-row>
-        <ion-col *ngFor="let tokenSetName of tokenSetNames">
+        <ion-col *ngFor="let cardSetName of cardSetNames">
             <ion-button
                 expand="block"
                 fill="outline"
-                (click)="loadTokenSet(tokenSetName)"
-                >{{ tokenSetName }}</ion-button
+                (click)="loadCardSet(cardSetName)"
+                >{{ cardSetName }}</ion-button
             >
         </ion-col>
     </ion-row>
