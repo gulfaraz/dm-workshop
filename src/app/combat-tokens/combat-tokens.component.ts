@@ -30,5 +30,7 @@ export class CombatTokensComponent {
     };
 
     loadTokenSet = (tokenSetName: string) =>
-        this.setTokens(tokenSetName ? tokenSets[tokenSetName] : []);
+        this.setTokens(
+            tokenSetName ? [...tokenSets[tokenSetName], ...this.tokens] : [],
+        );
 }
