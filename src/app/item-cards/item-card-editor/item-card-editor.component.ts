@@ -6,7 +6,6 @@ import config from '../../shared/config';
 @Component({
     selector: 'app-item-card-editor',
     templateUrl: './item-card-editor.component.html',
-    styleUrls: ['./item-card-editor.component.scss'],
 })
 export class ItemCardEditorComponent {
     @Input() card!: Card;
