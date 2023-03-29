@@ -14,4 +14,15 @@ export const sizes = {
     Gargantuan: '8x8',
 };
 
-export default { sizes };
+export const colours = [
+    '#009e73', // green
+    '#56b4e9', // cerulean
+    '#f0e442', // yellow
+    '#0072b2', // blue
+    '#d55e00', // orange
+    '#cc79a7', // pink
+    '#999999', // gray
+    '#e69f00', // light orange
+];
+
+export default { sizes, colours };

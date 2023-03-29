@@ -20,7 +20,7 @@
                 </ion-item>
             </ion-col>
             <ion-col>
-                <ion-row class="ion-padding-bottom">
+                <ion-row>
                     <ion-col class="ion-padding-bottom">
                         <ion-button
                             mode="ios"
@@ -29,7 +29,18 @@
                             type="submit"
                             [disabled]="!combatTokenEditorForm.form.valid"
                         >
-                            Save
+                            Add 1 Token
+                        </ion-button>
+                        <ion-button
+                            size="small"
+                            mode="ios"
+                            expand="block"
+                            color="success"
+                            fill="outline"
+                            (click)="onSaveBatch()"
+                            [disabled]="!combatTokenEditorForm.form.valid"
+                        >
+                            Add 8 Tokens
                         </ion-button>
                     </ion-col>
                 </ion-row>
@@ -94,9 +105,13 @@
                     </ion-col>
                 </ion-row>
                 <ion-row>
-                    <ion-col>
+                    <ion-col class="ion-no-padding">
                         <ion-item lines="none">
-                            <ion-label position="floating" for="zoom">
+                            <ion-label
+                                position="floating"
+                                for="zoom"
+                                class="token-zoom-label"
+                            >
                                 Zoom
                             </ion-label>
                             <ion-range
