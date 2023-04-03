@@ -8,7 +8,7 @@ import { tokenSets } from './combat-token-sets/combat-token.sets';
     templateUrl: './combat-tokens.component.html',
 })
 export class CombatTokensComponent {
-    tokens: Token[] = tokenSets['Diverse'];
+    tokens: Token[] = tokenSets['Mixed'];
     token = Object.assign({}, this.tokens[0]);
     storageKey = 'combat-tokens';
 
