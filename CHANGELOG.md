@@ -1,3 +1,20 @@
+# [0.5.0](https://github.com/gulfaraz/dm-workshop/compare/v0.4.3...v0.5.0) (2023-04-03)
+
+
+### Bug Fixes
+
+* use full width for item editor form ([8903ce8](https://github.com/gulfaraz/dm-workshop/commit/8903ce82489de768a41f749f536caea47002ef01))
+
+
+### Features
+
+* add combat token sets ([fb16517](https://github.com/gulfaraz/dm-workshop/commit/fb165177758fac0de077ce3f2d99687959626cc8))
+* add tokens in batch ([98cd5a8](https://github.com/gulfaraz/dm-workshop/commit/98cd5a821ff74552549cd894b1933fd5d85db30f))
+* append tokens from set instead of replace ([cb20f7f](https://github.com/gulfaraz/dm-workshop/commit/cb20f7f4fbcb8cdf720208b42cc59978cb7bee06))
+* item card sets ([628233b](https://github.com/gulfaraz/dm-workshop/commit/628233b93550e3962d180592356a56eeda7874dc))
+
+
+
 ## [0.4.3](https://github.com/gulfaraz/dm-workshop/compare/v0.4.2...v0.4.3) (2023-03-27)
 
 
