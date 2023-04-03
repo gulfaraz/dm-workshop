@@ -15,6 +15,10 @@
                     [card]="card"
                     (saveCardEvent)="saveCard($event)"
                 ></app-item-card-editor>
+                <ion-progress-bar value="1" color="light"></ion-progress-bar>
+                <app-item-card-sets
+                    (loadCardSetEvent)="loadCardSet($event)"
+                ></app-item-card-sets>
             </ion-col>
             <ion-col>
                 <app-item-cards-controls

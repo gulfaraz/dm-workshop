@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
-import { Token, sizes } from '../combat-tokens.type';
+import { Token, sizes, colours } from '../combat-tokens.type';
 import config from '../../shared/config';
 
 @Component({
@@ -19,4 +19,9 @@ export class CombatTokenEditorComponent {
     sizes = sizes;
 
     onSave = () => this.saveTokenEvent.emit(this.token);
+
+    onSaveBatch = () =>
+        colours.forEach((colour) =>
+            this.saveTokenEvent.emit(Object.assign({}, this.token, { colour })),
+        );
 }
