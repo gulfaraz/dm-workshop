@@ -7,6 +7,7 @@ import * as devilsTokens from './devils.combat-token-set.json';
 import * as demonsTokens from './demons.combat-token-set.json';
 import * as yugolothsTokens from './yugoloths.combat-token-set.json';
 import * as fiendsTokens from './fiends.combat-token-set.json';
+import * as conjureAnimalsTokens from './conjure-animals.combat-token-set.json';
 
 export const tokenSets: { [key: string]: Token[] } = {
     Fey: Array.from(feyTokens),
@@ -15,6 +16,7 @@ export const tokenSets: { [key: string]: Token[] } = {
     Demons: Array.from(demonsTokens),
     Yugoloths: Array.from(yugolothsTokens),
     Fiends: Array.from(fiendsTokens),
+    'Conjure Animals': Array.from(conjureAnimalsTokens),
     Mixed: Array.from(mixedTokens),
 };
 

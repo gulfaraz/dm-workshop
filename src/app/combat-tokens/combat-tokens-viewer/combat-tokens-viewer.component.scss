@@ -4,10 +4,10 @@
 
 .sheet {
     --rows: 16;
-    --columns: 23;
-    --gap: 5mm;
+    --columns: 22;
+    --gap: 0.5mm;
     margin: 5mm;
-    padding: 4.75mm 5mm;
+    padding: 1.25mm 5.75mm;
     grid-auto-flow: row;
 }
 
