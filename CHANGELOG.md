@@ -1,3 +1,13 @@
+## [0.5.1](https://github.com/gulfaraz/dm-workshop/compare/v0.5.0...v0.5.1) (2023-04-17)
+
+
+### Bug Fixes
+
+* set grid gap to 0.5mm ([b281a01](https://github.com/gulfaraz/dm-workshop/commit/b281a01d88d4e7cb0c2d1fcb9ac66b2c2a9c7fbd))
+* update token sets to resized capacity ([6ce076a](https://github.com/gulfaraz/dm-workshop/commit/6ce076a2eb524ec6d435505f9fedca447d0af005))
+
+
+
 # [0.5.0](https://github.com/gulfaraz/dm-workshop/compare/v0.4.3...v0.5.0) (2023-04-03)
 
 
