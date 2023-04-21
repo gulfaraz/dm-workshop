@@ -2,7 +2,6 @@
 
 1. Item Cards
 2. Combat Tokens
-3. Alignment Tracker
 
 ---
 
