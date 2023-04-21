@@ -1,3 +1,12 @@
+# [0.6.0](https://github.com/gulfaraz/dm-workshop/compare/v0.5.1...v0.6.0) (2023-04-21)
+
+
+### Features
+
+* remove alignment tracker ([4268ae7](https://github.com/gulfaraz/dm-workshop/commit/4268ae76a6a55ded422e3c4bf75658b4f5a79d84))
+
+
+
 ## [0.5.1](https://github.com/gulfaraz/dm-workshop/compare/v0.5.0...v0.5.1) (2023-04-17)
 
 
