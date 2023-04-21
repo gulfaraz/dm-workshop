@@ -30,13 +30,6 @@ import { DMWorkshopComponent } from './dm-workshop.component';
                                     './combat-tokens/combat-tokens.module'
                                 ).then((m) => m.CombatTokensModule),
                         },
-                        {
-                            path: 'alignment-tracker',
-                            loadChildren: () =>
-                                import(
-                                    './alignment-tracker/alignment-tracker.module'
-                                ).then((m) => m.AlignmentTrackerModule),
-                        },
                     ],
                 },
             ],
