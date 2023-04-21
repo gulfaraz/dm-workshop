@@ -5,4 +5,6 @@ import { Component } from '@angular/core';
     templateUrl: './dm-workshop.component.html',
     styleUrls: ['./dm-workshop.component.scss'],
 })
-export class DMWorkshopComponent {}
+export class DMWorkshopComponent {
+    paymentLink = 'https://buy.stripe.com/5kAcMMbGXc0NexW144';
+}
