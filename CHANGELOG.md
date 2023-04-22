@@ -1,3 +1,18 @@
+# [0.8.0](https://github.com/gulfaraz/dm-workshop/compare/v0.7.0...v0.8.0) (2023-04-22)
+
+
+### Bug Fixes
+
+* remove UserTrackingService ([8e39a8c](https://github.com/gulfaraz/dm-workshop/commit/8e39a8cc310cdb28e0853e015f5525aadbf1040c))
+
+
+### Features
+
+* firebase ([394f52c](https://github.com/gulfaraz/dm-workshop/commit/394f52c0d3891fbf89c8f6674e16416e9a145275))
+* use ScreenTrackingService and UserTrackingService ([6388417](https://github.com/gulfaraz/dm-workshop/commit/6388417741261649993286789ebb272c449a2058))
+
+
+
 # [0.7.0](https://github.com/gulfaraz/dm-workshop/compare/v0.6.0...v0.7.0) (2023-04-21)
 
 
@@ -93,15 +108,6 @@
 * export combat tokens as html ([229ce7b](https://github.com/gulfaraz/dm-workshop/commit/229ce7b8808750a4181449d03c1a6c007cb813dd))
 * link to alignment tracker and github ([2d244cf](https://github.com/gulfaraz/dm-workshop/commit/2d244cf3fb1ae31e1c42c60a833e2c7eece38452))
 * row and column orientation for sheet service ([8e4cd50](https://github.com/gulfaraz/dm-workshop/commit/8e4cd50651ff172c4f5d4aabd589ac9f0d4dd847))
-
-
-
-## [0.2.1](https://github.com/gulfaraz/dm-workshop/compare/v0.2.0...v0.2.1) (2023-03-14)
-
-
-### Bug Fixes
-
-* force equal width for item cards ([bdb671f](https://github.com/gulfaraz/dm-workshop/commit/bdb671f4ef2a017b3854921fde510e086ba57391))
 
 
 
