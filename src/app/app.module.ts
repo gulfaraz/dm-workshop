@@ -6,7 +6,6 @@ import {
     provideAnalytics,
     getAnalytics,
     ScreenTrackingService,
-    UserTrackingService,
 } from '@angular/fire/analytics';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -24,6 +23,6 @@ import { DMWorkshopComponent } from './dm-workshop.component';
     ],
     declarations: [AppComponent, DMWorkshopComponent],
     bootstrap: [AppComponent],
-    providers: [ScreenTrackingService, UserTrackingService],
+    providers: [ScreenTrackingService],
 })
 export class AppModule {}
