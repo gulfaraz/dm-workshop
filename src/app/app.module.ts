@@ -2,10 +2,15 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicModule } from '@ionic/angular';
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
-import { getAnalytics, provideAnalytics } from '@angular/fire/analytics';
+import {
+    provideAnalytics,
+    getAnalytics,
+    ScreenTrackingService,
+    UserTrackingService,
+} from '@angular/fire/analytics';
 
-import { environment } from 'src/environments/environment';
 import { AppRoutingModule } from './app-routing.module';
+import { environment } from 'src/environments/environment';
 import { AppComponent } from './app.component';
 import { DMWorkshopComponent } from './dm-workshop.component';
 
@@ -19,6 +24,6 @@ import { DMWorkshopComponent } from './dm-workshop.component';
     ],
     declarations: [AppComponent, DMWorkshopComponent],
     bootstrap: [AppComponent],
-    providers: [],
+    providers: [ScreenTrackingService, UserTrackingService],
 })
 export class AppModule {}
