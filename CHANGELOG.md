@@ -1,3 +1,12 @@
+## [0.9.3](https://github.com/gulfaraz/dm-workshop/compare/v0.9.2...v0.9.3) (2023-05-21)
+
+
+### Bug Fixes
+
+* specify app link in legal ([d7bd76a](https://github.com/gulfaraz/dm-workshop/commit/d7bd76a50af92491bc035eb4014c671bf70681fc))
+
+
+
 ## [0.9.2](https://github.com/gulfaraz/dm-workshop/compare/v0.9.1...v0.9.2) (2023-05-21)
 
 
@@ -91,15 +100,6 @@
 ### Bug Fixes
 
 * reset item card size on save and clear ([4fd079a](https://github.com/gulfaraz/dm-workshop/commit/4fd079a2b1610d9375fd306ed3705d71f7404635))
-
-
-
-## [0.4.2](https://github.com/gulfaraz/dm-workshop/compare/v0.4.1...v0.4.2) (2023-03-24)
-
-
-### Bug Fixes
-
-* select styling and item cards table overflow ([5cebf51](https://github.com/gulfaraz/dm-workshop/commit/5cebf5181c1527bca55ca131e84109a3f3017653))
 
 
 
