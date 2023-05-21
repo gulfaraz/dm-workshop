@@ -1,3 +1,12 @@
+## [0.9.1](https://github.com/gulfaraz/dm-workshop/compare/v0.9.0...v0.9.1) (2023-05-21)
+
+
+### Bug Fixes
+
+* add legal module ([f55253b](https://github.com/gulfaraz/dm-workshop/commit/f55253b22e927328095815e3b766e84562cf4ba4))
+
+
+
 # [0.9.0](https://github.com/gulfaraz/dm-workshop/compare/v0.8.0...v0.9.0) (2023-05-07)
 
 
@@ -91,17 +100,6 @@
 ### Bug Fixes
 
 * reset import value after json file import ([4596aa8](https://github.com/gulfaraz/dm-workshop/commit/4596aa8530562ffcd396cc3b6216c75ec26e54c8))
-
-
-
-# [0.4.0](https://github.com/gulfaraz/dm-workshop/compare/v0.3.0...v0.4.0) (2023-03-22)
-
-
-### Features
-
-* alignment tracker ([2f84b52](https://github.com/gulfaraz/dm-workshop/commit/2f84b52a8456ea11d3ceba89941cf238ac789a79))
-* change uploader to importer ([8b9237e](https://github.com/gulfaraz/dm-workshop/commit/8b9237ef6dfb591657dbd8706a1de53b5df1d5cd))
-* combat token sets ([ba2713c](https://github.com/gulfaraz/dm-workshop/commit/ba2713c32ad82cda054e25e00ce09d54641e5131))
 
 
 
