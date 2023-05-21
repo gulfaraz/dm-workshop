@@ -1,3 +1,12 @@
+## [0.9.2](https://github.com/gulfaraz/dm-workshop/compare/v0.9.1...v0.9.2) (2023-05-21)
+
+
+### Bug Fixes
+
+* add full path to links ([af533c6](https://github.com/gulfaraz/dm-workshop/commit/af533c6e5b43557a92477b53c08687d9f1648490))
+
+
+
 ## [0.9.1](https://github.com/gulfaraz/dm-workshop/compare/v0.9.0...v0.9.1) (2023-05-21)
 
 
@@ -91,15 +100,6 @@
 ### Bug Fixes
 
 * select styling and item cards table overflow ([5cebf51](https://github.com/gulfaraz/dm-workshop/commit/5cebf5181c1527bca55ca131e84109a3f3017653))
-
-
-
-## [0.4.1](https://github.com/gulfaraz/dm-workshop/compare/v0.4.0...v0.4.1) (2023-03-24)
-
-
-### Bug Fixes
-
-* reset import value after json file import ([4596aa8](https://github.com/gulfaraz/dm-workshop/commit/4596aa8530562ffcd396cc3b6216c75ec26e54c8))
 
 
 
