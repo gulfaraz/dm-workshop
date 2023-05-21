@@ -30,6 +30,20 @@ import { DMWorkshopComponent } from './dm-workshop.component';
                                     './combat-tokens/combat-tokens.module'
                                 ).then((m) => m.CombatTokensModule),
                         },
+                        {
+                            path: 'privacy',
+                            loadChildren: () =>
+                                import('./legal/legal.module').then(
+                                    (m) => m.LegalModule,
+                                ),
+                        },
+                        {
+                            path: 'terms',
+                            loadChildren: () =>
+                                import('./legal/legal.module').then(
+                                    (m) => m.LegalModule,
+                                ),
+                        },
                     ],
                 },
             ],
