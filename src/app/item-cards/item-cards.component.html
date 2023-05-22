@@ -1,5 +1,85 @@
 <ion-content>
-    <ion-grid class="ion-margin">
+    <ion-grid [style.padding]="0">
+        <ion-row>
+            <ion-col class="ion-text-center ion-no-padding">
+                <ion-button
+                    id="how-to-use-item-cards-modal"
+                    fill="solid"
+                    expand="full"
+                    color="medium"
+                    size="small"
+                    class="ion-no-margin"
+                    >How to use Item Cards?</ion-button
+                >
+
+                <ion-modal
+                    #howToUseItemCardsModal
+                    trigger="how-to-use-item-cards-modal"
+                >
+                    <ng-template>
+                        <ion-header>
+                            <ion-toolbar>
+                                <ion-title>How to use Item Cards?</ion-title>
+                                <ion-buttons slot="end">
+                                    <ion-button
+                                        (click)="
+                                            howToUseItemCardsModal.dismiss()
+                                        "
+                                        >Close</ion-button
+                                    >
+                                </ion-buttons>
+                            </ion-toolbar>
+                        </ion-header>
+                        <ion-content>
+                            <ion-list lines="none">
+                                <ion-item>
+                                    <ion-label class="ion-text-wrap">
+                                        <br />
+                                        <br />
+                                        <h2>Input Item Card Information</h2>
+                                        <br />
+                                        <p>
+                                            Manual: Enter Item Card information
+                                            using the form editor, then click
+                                            "Save".
+                                        </p>
+                                        <br />
+                                        <p>
+                                            Import: Click "Import Item Cards
+                                            JSON" to bulk import Item Cards.
+                                        </p>
+                                    </ion-label>
+                                </ion-item>
+                                <ion-item>
+                                    <ion-label class="ion-text-wrap">
+                                        <br />
+                                        <br />
+                                        <h2>Preview and Print</h2>
+                                        <br />
+                                        <p>
+                                            Adjust Item Card sizes in the Table
+                                            view. Check the Item Cards in the
+                                            PDF view, then click "Export Item
+                                            Cards PDF".
+                                        </p>
+                                        <br />
+                                        <p>
+                                            Open the exported PDF file in a PDF
+                                            viewer, then Print on A4 paper.
+                                        </p>
+                                        <br />
+                                        <p>
+                                            Set print margins according to the
+                                            printer for optimal print result.
+                                        </p>
+                                    </ion-label>
+                                </ion-item>
+                            </ion-list>
+                        </ion-content>
+                    </ng-template>
+                </ion-modal>
+            </ion-col>
+        </ion-row>
         <ion-row>
             <ion-col>
                 <app-json-importer
