@@ -1,3 +1,12 @@
+## [0.9.4](https://github.com/gulfaraz/dm-workshop/compare/v0.9.3...v0.9.4) (2023-05-22)
+
+
+### Bug Fixes
+
+* add manuals for item cards and combat tokens ([7d808cc](https://github.com/gulfaraz/dm-workshop/commit/7d808ccc934fb2f73f85108b35441b92be79beea))
+
+
+
 ## [0.9.3](https://github.com/gulfaraz/dm-workshop/compare/v0.9.2...v0.9.3) (2023-05-21)
 
 
@@ -91,15 +100,6 @@
 * add tokens in batch ([98cd5a8](https://github.com/gulfaraz/dm-workshop/commit/98cd5a821ff74552549cd894b1933fd5d85db30f))
 * append tokens from set instead of replace ([cb20f7f](https://github.com/gulfaraz/dm-workshop/commit/cb20f7f4fbcb8cdf720208b42cc59978cb7bee06))
 * item card sets ([628233b](https://github.com/gulfaraz/dm-workshop/commit/628233b93550e3962d180592356a56eeda7874dc))
-
-
-
-## [0.4.3](https://github.com/gulfaraz/dm-workshop/compare/v0.4.2...v0.4.3) (2023-03-27)
-
-
-### Bug Fixes
-
-* reset item card size on save and clear ([4fd079a](https://github.com/gulfaraz/dm-workshop/commit/4fd079a2b1610d9375fd306ed3705d71f7404635))
 
 
 
