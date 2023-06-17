@@ -12,10 +12,22 @@
     "colour": "#e69f00"
   },
   {
+    "image": "https://angrygolem-games.com/wp-content/uploads/2021/11/Constrictor-Snake.jpg",
+    "size": "Huge",
+    "zoom": 88,
+    "colour": "#f0e442"
+  },
+  {
     "image": "https://www.belloflostsouls.net/wp-content/uploads/2019/10/elk.jpg",
     "size": "Huge",
     "zoom": 86,
     "colour": "#56b4e9"
+  },
+  {
+    "image": "https://www.belloflostsouls.net/wp-content/uploads/2019/10/elk.jpg",
+    "size": "Huge",
+    "zoom": 86,
+    "colour": "#009e73"
   },
   {
     "image": "https://i.pinimg.com/originals/43/34/3f/43343f11375a483f85d3262e61cc6cf7.png",
