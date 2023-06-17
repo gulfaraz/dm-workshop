@@ -1,3 +1,13 @@
+## [0.9.5](https://github.com/gulfaraz/dm-workshop/compare/v0.9.4...v0.9.5) (2023-06-17)
+
+
+### Bug Fixes
+
+* fill empty space for conjure animals ([fb66591](https://github.com/gulfaraz/dm-workshop/commit/fb66591c2e53b387e3d1b679e39921fb217f6e57))
+* update dead link for lizard ([b08c2b8](https://github.com/gulfaraz/dm-workshop/commit/b08c2b81fbde8a36b2eb7a82e3bd73bb3d88ab4c))
+
+
+
 ## [0.9.4](https://github.com/gulfaraz/dm-workshop/compare/v0.9.3...v0.9.4) (2023-05-22)
 
 
@@ -83,23 +93,6 @@
 
 * set grid gap to 0.5mm ([b281a01](https://github.com/gulfaraz/dm-workshop/commit/b281a01d88d4e7cb0c2d1fcb9ac66b2c2a9c7fbd))
 * update token sets to resized capacity ([6ce076a](https://github.com/gulfaraz/dm-workshop/commit/6ce076a2eb524ec6d435505f9fedca447d0af005))
-
-
-
-# [0.5.0](https://github.com/gulfaraz/dm-workshop/compare/v0.4.3...v0.5.0) (2023-04-03)
-
-
-### Bug Fixes
-
-* use full width for item editor form ([8903ce8](https://github.com/gulfaraz/dm-workshop/commit/8903ce82489de768a41f749f536caea47002ef01))
-
-
-### Features
-
-* add combat token sets ([fb16517](https://github.com/gulfaraz/dm-workshop/commit/fb165177758fac0de077ce3f2d99687959626cc8))
-* add tokens in batch ([98cd5a8](https://github.com/gulfaraz/dm-workshop/commit/98cd5a821ff74552549cd894b1933fd5d85db30f))
-* append tokens from set instead of replace ([cb20f7f](https://github.com/gulfaraz/dm-workshop/commit/cb20f7f4fbcb8cdf720208b42cc59978cb7bee06))
-* item card sets ([628233b](https://github.com/gulfaraz/dm-workshop/commit/628233b93550e3962d180592356a56eeda7874dc))
 
 
 
