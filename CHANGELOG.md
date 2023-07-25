@@ -1,3 +1,12 @@
+## [0.9.6](https://github.com/gulfaraz/dm-workshop/compare/v0.9.5...v0.9.6) (2023-07-25)
+
+
+### Bug Fixes
+
+* footer should not overlap with item card viewer ([1eabbf1](https://github.com/gulfaraz/dm-workshop/commit/1eabbf17845450f8b43e04eba4611eba69a4d619))
+
+
+
 ## [0.9.5](https://github.com/gulfaraz/dm-workshop/compare/v0.9.4...v0.9.5) (2023-06-17)
 
 
@@ -83,16 +92,6 @@
 ### Features
 
 * remove alignment tracker ([4268ae7](https://github.com/gulfaraz/dm-workshop/commit/4268ae76a6a55ded422e3c4bf75658b4f5a79d84))
-
-
-
-## [0.5.1](https://github.com/gulfaraz/dm-workshop/compare/v0.5.0...v0.5.1) (2023-04-17)
-
-
-### Bug Fixes
-
-* set grid gap to 0.5mm ([b281a01](https://github.com/gulfaraz/dm-workshop/commit/b281a01d88d4e7cb0c2d1fcb9ac66b2c2a9c7fbd))
-* update token sets to resized capacity ([6ce076a](https://github.com/gulfaraz/dm-workshop/commit/6ce076a2eb524ec6d435505f9fedca447d0af005))
 
 
 
