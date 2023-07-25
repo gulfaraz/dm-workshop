@@ -1,116 +1,112 @@
-<ion-content>
-    <ion-grid [style.padding]="0">
-        <ion-row>
-            <ion-col class="ion-text-center ion-no-padding">
-                <ion-button
-                    id="how-to-use-combat-tokens-modal"
-                    fill="solid"
-                    expand="full"
-                    color="medium"
-                    size="small"
-                    class="ion-no-margin"
-                    >How to use Combat Tokens?</ion-button
-                >
-                <ion-modal
-                    #howToUseCombatTokensModal
-                    trigger="how-to-use-combat-tokens-modal"
-                >
-                    <ng-template>
-                        <ion-header>
-                            <ion-toolbar>
-                                <ion-title>How to use Combat Tokens?</ion-title>
-                                <ion-buttons slot="end">
-                                    <ion-button
-                                        (click)="
-                                            howToUseCombatTokensModal.dismiss()
-                                        "
-                                        >Close</ion-button
-                                    >
-                                </ion-buttons>
-                            </ion-toolbar>
-                        </ion-header>
-                        <ion-content>
-                            <ion-list lines="none">
-                                <ion-item>
-                                    <ion-label class="ion-text-wrap">
-                                        <br />
-                                        <br />
-                                        <h2>Input Combat Token Information</h2>
-                                        <br />
-                                        <p>
-                                            Manual: Enter Combat Token
-                                            information using the form editor,
-                                            then click "Add Token".
-                                        </p>
-                                        <br />
-                                        <p>
-                                            Import: Click "Import Combat Tokens
-                                            JSON" to bulk import Combat Tokens.
-                                        </p>
-                                    </ion-label>
-                                </ion-item>
-                                <ion-item>
-                                    <ion-label class="ion-text-wrap">
-                                        <br />
-                                        <br />
-                                        <h2>Preview and Print</h2>
-                                        <br />
-                                        <p>
-                                            Check the Combat Tokens in the
-                                            Preview, then click "Export Combat
-                                            Tokens HTML".
-                                        </p>
-                                        <br />
-                                        <p>
-                                            Open the exported HTML file in an
-                                            internet browser, then Print on A4
-                                            paper.
-                                        </p>
-                                        <br />
-                                        <p>
-                                            Enable background graphics in the
-                                            print settings and set print margins
-                                            according to the printer for optimal
-                                            print result.
-                                        </p>
-                                    </ion-label>
-                                </ion-item>
-                            </ion-list>
-                        </ion-content>
-                    </ng-template>
-                </ion-modal>
-            </ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-col>
-                <app-json-importer
-                    label="Import Combat Tokens JSON"
-                    expand="block"
-                    fill="outline"
-                    size="large"
-                    classes="ion-margin"
-                    (importEvent)="setTokens($event)"
-                ></app-json-importer>
-                <ion-progress-bar value="1" color="light"></ion-progress-bar>
-                <app-combat-token-editor
-                    [token]="token"
-                    (saveTokenEvent)="saveToken($event)"
-                ></app-combat-token-editor>
-                <ion-progress-bar value="1" color="light"></ion-progress-bar>
-                <app-combat-token-sets
-                    (loadTokenSetEvent)="loadTokenSet($event)"
-                ></app-combat-token-sets>
-            </ion-col>
-            <ion-col>
-                <app-combat-tokens-controls
-                    [tokens]="tokens"
-                ></app-combat-tokens-controls>
-                <app-combat-tokens-viewer
-                    [tokens]="tokens"
-                    (deleteTokenEvent)="deleteToken($event)"
-                ></app-combat-tokens-viewer>
-            </ion-col>
-        </ion-row>
-    </ion-grid>
-    <app-footer></app-footer>
-</ion-content>
+<ion-grid>
+    <ion-row>
+        <ion-col class="ion-text-center ion-no-padding">
+            <ion-button
+                id="how-to-use-combat-tokens-modal"
+                fill="solid"
+                expand="full"
+                color="medium"
+                size="small"
+                class="ion-no-margin"
+                >How to use Combat Tokens?</ion-button
+            >
+            <ion-modal
+                #howToUseCombatTokensModal
+                trigger="how-to-use-combat-tokens-modal"
+            >
+                <ng-template>
+                    <ion-header>
+                        <ion-toolbar>
+                            <ion-title>How to use Combat Tokens?</ion-title>
+                            <ion-buttons slot="end">
+                                <ion-button
+                                    (click)="
+                                        howToUseCombatTokensModal.dismiss()
+                                    "
+                                    >Close</ion-button
+                                >
+                            </ion-buttons>
+                        </ion-toolbar>
+                    </ion-header>
+                    <ion-content>
+                        <ion-list lines="none">
+                            <ion-item>
+                                <ion-label class="ion-text-wrap">
+                                    <br />
+                                    <br />
+                                    <h2>Input Combat Token Information</h2>
+                                    <br />
+                                    <p>
+                                        Manual: Enter Combat Token information
+                                        using the form editor, then click "Add
+                                        Token".
+                                    </p>
+                                    <br />
+                                    <p>
+                                        Import: Click "Import Combat Tokens
+                                        JSON" to bulk import Combat Tokens.
+                                    </p>
+                                </ion-label>
+                            </ion-item>
+                            <ion-item>
+                                <ion-label class="ion-text-wrap">
+                                    <br />
+                                    <br />
+                                    <h2>Preview and Print</h2>
+                                    <br />
+                                    <p>
+                                        Check the Combat Tokens in the Preview,
+                                        then click "Export Combat Tokens HTML".
+                                    </p>
+                                    <br />
+                                    <p>
+                                        Open the exported HTML file in an
+                                        internet browser, then Print on A4
+                                        paper.
+                                    </p>
+                                    <br />
+                                    <p>
+                                        Enable background graphics in the print
+                                        settings and set print margins according
+                                        to the printer for optimal print result.
+                                    </p>
+                                </ion-label>
+                            </ion-item>
+                        </ion-list>
+                    </ion-content>
+                </ng-template>
+            </ion-modal>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+            <app-json-importer
+                label="Import Combat Tokens JSON"
+                expand="block"
+                fill="outline"
+                size="large"
+                classes="ion-margin"
+                (importEvent)="setTokens($event)"
+            ></app-json-importer>
+            <ion-progress-bar value="1" color="light"></ion-progress-bar>
+            <app-combat-token-editor
+                [token]="token"
+                (saveTokenEvent)="saveToken($event)"
+            ></app-combat-token-editor>
+            <ion-progress-bar value="1" color="light"></ion-progress-bar>
+            <app-combat-token-sets
+                (loadTokenSetEvent)="loadTokenSet($event)"
+            ></app-combat-token-sets>
+        </ion-col>
+        <ion-col>
+            <app-combat-tokens-controls
+                [tokens]="tokens"
+            ></app-combat-tokens-controls>
+            <app-combat-tokens-viewer
+                [tokens]="tokens"
+                (deleteTokenEvent)="deleteToken($event)"
+            ></app-combat-tokens-viewer>
+        </ion-col>
+    </ion-row>
+</ion-grid>
+<app-footer></app-footer>

@@ -6,6 +6,7 @@ import { cardSets } from './item-card-sets/item-card.sets';
 @Component({
     selector: 'app-item-cards',
     templateUrl: './item-cards.component.html',
+    styleUrls: ['./item-cards.component.scss'],
 })
 export class ItemCardsComponent {
     cards: Card[] = cardSets['Starter'];

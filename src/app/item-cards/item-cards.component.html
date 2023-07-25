@@ -1,124 +1,120 @@
-<ion-content>
-    <ion-grid [style.padding]="0">
-        <ion-row>
-            <ion-col class="ion-text-center ion-no-padding">
-                <ion-button
-                    id="how-to-use-item-cards-modal"
-                    fill="solid"
-                    expand="full"
-                    color="medium"
-                    size="small"
-                    class="ion-no-margin"
-                    >How to use Item Cards?</ion-button
-                >
+<ion-grid>
+    <ion-row>
+        <ion-col class="ion-text-center ion-no-padding">
+            <ion-button
+                id="how-to-use-item-cards-modal"
+                fill="solid"
+                expand="full"
+                color="medium"
+                size="small"
+                class="ion-no-margin"
+                >How to use Item Cards?</ion-button
+            >
 
-                <ion-modal
-                    #howToUseItemCardsModal
-                    trigger="how-to-use-item-cards-modal"
-                >
-                    <ng-template>
-                        <ion-header>
-                            <ion-toolbar>
-                                <ion-title>How to use Item Cards?</ion-title>
-                                <ion-buttons slot="end">
-                                    <ion-button
-                                        (click)="
-                                            howToUseItemCardsModal.dismiss()
-                                        "
-                                        >Close</ion-button
-                                    >
-                                </ion-buttons>
-                            </ion-toolbar>
-                        </ion-header>
-                        <ion-content>
-                            <ion-list lines="none">
-                                <ion-item>
-                                    <ion-label class="ion-text-wrap">
-                                        <br />
-                                        <br />
-                                        <h2>Input Item Card Information</h2>
-                                        <br />
-                                        <p>
-                                            Manual: Enter Item Card information
-                                            using the form editor, then click
-                                            "Save".
-                                        </p>
-                                        <br />
-                                        <p>
-                                            Import: Click "Import Item Cards
-                                            JSON" to bulk import Item Cards.
-                                        </p>
-                                    </ion-label>
-                                </ion-item>
-                                <ion-item>
-                                    <ion-label class="ion-text-wrap">
-                                        <br />
-                                        <br />
-                                        <h2>Preview and Print</h2>
-                                        <br />
-                                        <p>
-                                            Adjust Item Card sizes in the Table
-                                            view. Check the Item Cards in the
-                                            PDF view, then click "Export Item
-                                            Cards PDF".
-                                        </p>
-                                        <br />
-                                        <p>
-                                            Open the exported PDF file in a PDF
-                                            viewer, then Print on A4 paper.
-                                        </p>
-                                        <br />
-                                        <p>
-                                            Set print margins according to the
-                                            printer for optimal print result.
-                                        </p>
-                                    </ion-label>
-                                </ion-item>
-                            </ion-list>
-                        </ion-content>
-                    </ng-template>
-                </ion-modal>
-            </ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-col>
-                <app-json-importer
-                    label="Import Item Cards JSON"
-                    expand="block"
-                    fill="outline"
-                    size="large"
-                    classes="ion-margin"
-                    (importEvent)="setCards($event)"
-                ></app-json-importer>
-                <ion-progress-bar value="1" color="light"></ion-progress-bar>
-                <app-item-card-editor
-                    [card]="card"
-                    (saveCardEvent)="saveCard($event)"
-                ></app-item-card-editor>
-                <ion-progress-bar value="1" color="light"></ion-progress-bar>
-                <app-item-card-sets
-                    (loadCardSetEvent)="loadCardSet($event)"
-                ></app-item-card-sets>
-            </ion-col>
-            <ion-col>
-                <app-item-cards-controls
-                    [preview]="preview"
-                    (togglePreviewEvent)="togglePreview($event)"
-                    [cards]="cards"
-                ></app-item-cards-controls>
-                <app-item-cards-table
-                    *ngIf="!preview"
-                    [cards]="cards"
-                    (deleteCardEvent)="deleteCard($event)"
-                    (loadCardEvent)="loadCard($event)"
-                ></app-item-cards-table>
-                <app-item-cards-viewer
-                    *ngIf="preview"
-                    [cards]="cards"
-                    (loadCardEvent)="loadCard($event)"
-                ></app-item-cards-viewer>
-            </ion-col>
-        </ion-row>
-    </ion-grid>
-    <app-footer></app-footer>
-</ion-content>
+            <ion-modal
+                #howToUseItemCardsModal
+                trigger="how-to-use-item-cards-modal"
+            >
+                <ng-template>
+                    <ion-header>
+                        <ion-toolbar>
+                            <ion-title>How to use Item Cards?</ion-title>
+                            <ion-buttons slot="end">
+                                <ion-button
+                                    (click)="howToUseItemCardsModal.dismiss()"
+                                    >Close</ion-button
+                                >
+                            </ion-buttons>
+                        </ion-toolbar>
+                    </ion-header>
+                    <ion-content>
+                        <ion-list lines="none">
+                            <ion-item>
+                                <ion-label class="ion-text-wrap">
+                                    <br />
+                                    <br />
+                                    <h2>Input Item Card Information</h2>
+                                    <br />
+                                    <p>
+                                        Manual: Enter Item Card information
+                                        using the form editor, then click
+                                        "Save".
+                                    </p>
+                                    <br />
+                                    <p>
+                                        Import: Click "Import Item Cards JSON"
+                                        to bulk import Item Cards.
+                                    </p>
+                                </ion-label>
+                            </ion-item>
+                            <ion-item>
+                                <ion-label class="ion-text-wrap">
+                                    <br />
+                                    <br />
+                                    <h2>Preview and Print</h2>
+                                    <br />
+                                    <p>
+                                        Adjust Item Card sizes in the Table
+                                        view. Check the Item Cards in the PDF
+                                        view, then click "Export Item Cards
+                                        PDF".
+                                    </p>
+                                    <br />
+                                    <p>
+                                        Open the exported PDF file in a PDF
+                                        viewer, then Print on A4 paper.
+                                    </p>
+                                    <br />
+                                    <p>
+                                        Set print margins according to the
+                                        printer for optimal print result.
+                                    </p>
+                                </ion-label>
+                            </ion-item>
+                        </ion-list>
+                    </ion-content>
+                </ng-template>
+            </ion-modal>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+            <app-json-importer
+                label="Import Item Cards JSON"
+                expand="block"
+                fill="outline"
+                size="large"
+                classes="ion-margin"
+                (importEvent)="setCards($event)"
+            ></app-json-importer>
+            <ion-progress-bar value="1" color="light"></ion-progress-bar>
+            <app-item-card-editor
+                [card]="card"
+                (saveCardEvent)="saveCard($event)"
+            ></app-item-card-editor>
+            <ion-progress-bar value="1" color="light"></ion-progress-bar>
+            <app-item-card-sets
+                (loadCardSetEvent)="loadCardSet($event)"
+            ></app-item-card-sets>
+        </ion-col>
+        <ion-col>
+            <app-item-cards-controls
+                [preview]="preview"
+                (togglePreviewEvent)="togglePreview($event)"
+                [cards]="cards"
+            ></app-item-cards-controls>
+            <app-item-cards-table
+                *ngIf="!preview"
+                [cards]="cards"
+                (deleteCardEvent)="deleteCard($event)"
+                (loadCardEvent)="loadCard($event)"
+            ></app-item-cards-table>
+            <app-item-cards-viewer
+                *ngIf="preview"
+                [cards]="cards"
+                (loadCardEvent)="loadCard($event)"
+            ></app-item-cards-viewer>
+        </ion-col>
+    </ion-row>
+</ion-grid>
+<app-footer></app-footer>
