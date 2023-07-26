@@ -2,7 +2,11 @@
     <form #combatTokenEditorForm="ngForm" (ngSubmit)="onSave()" mode="md">
         <ion-row>
             <ion-col size="8">
-                <ion-item fill="outline" class="token-preview">
+                <ion-item
+                    fill="outline"
+                    class="token-preview"
+                    [appCombatTokenEditorWheel]="token"
+                >
                     <ion-label position="floating" for="preview">
                         Preview
                     </ion-label>
@@ -122,8 +126,9 @@
                                 id="zoom"
                                 required="true"
                                 pin="true"
-                                min="10"
-                                max="200"
+                                [min]="zoomRange.min"
+                                [max]="zoomRange.max"
+                                [appCombatTokenEditorWheel]="token"
                             ></ion-range>
                         </ion-item>
                     </ion-col>

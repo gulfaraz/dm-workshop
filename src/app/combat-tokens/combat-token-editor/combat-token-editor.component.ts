@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
-import { Token, sizes, colours } from '../combat-tokens.type';
+import { Token, sizes, colours, zoomRange } from '../combat-tokens.type';
 import config from '../../shared/config';
 
 @Component({
@@ -17,6 +17,7 @@ export class CombatTokenEditorComponent {
 
     debounce = config.debounce;
     sizes = sizes;
+    zoomRange = zoomRange;
 
     onSave = () => this.saveTokenEvent.emit(this.token);
 

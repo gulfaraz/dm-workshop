@@ -25,4 +25,9 @@ export const colours = [
     '#e69f00', // light orange
 ];
 
-export default { sizes, colours };
+export const zoomRange = {
+    min: 10,
+    max: 200,
+};
+
+export default { sizes, colours, zoomRange };
