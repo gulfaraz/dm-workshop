@@ -7,7 +7,7 @@ import {
     SimpleChanges,
 } from '@angular/core';
 
-import { Token } from '../combat-tokens.type';
+import { Token, scaleTokenPosition } from '../combat-tokens.type';
 import { CombatTokensService } from '../combat-tokens.service';
 
 @Component({
@@ -24,6 +24,7 @@ export class CombatTokensViewerComponent implements OnChanges {
     @Output() deleteTokenEvent = new EventEmitter<Token>();
 
     sheets: Token[][] = [];
+    scaleTokenPosition = scaleTokenPosition;
 
     constructor(private combatTokensService: CombatTokensService) {}
 

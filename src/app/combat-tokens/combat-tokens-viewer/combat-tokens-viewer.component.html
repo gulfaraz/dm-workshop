@@ -7,6 +7,12 @@
                 [style.background-image]="'url(' + token.image + ')'"
                 [style.border-color]="token.colour"
                 [style.background-size]="token.zoom + '%'"
+                [style.background-position-x]="
+                    scaleTokenPosition(token.positionX, token.size)
+                "
+                [style.background-position-y]="
+                    scaleTokenPosition(token.positionY, token.size)
+                "
                 (click)="deleteToken(token)"
             ></div>
         </section>

@@ -11,6 +11,8 @@ import { CombatTokensControlsComponent } from './combat-tokens-controls/combat-t
 import { CombatTokensViewerComponent } from './combat-tokens-viewer/combat-tokens-viewer.component';
 import { CombatTokenSetsComponent } from './combat-token-sets/combat-token-sets.component';
 import { CombatTokensService } from './combat-tokens.service';
+import { CombatTokenEditorWheelDirective } from './combat-token-editor/combat-token-editor-wheel.directive';
+import { CombatTokenEditorDragDirective } from './combat-token-editor/combat-token-editor-drag.directive';
 
 @NgModule({
     imports: [
@@ -26,6 +28,8 @@ import { CombatTokensService } from './combat-tokens.service';
         CombatTokensControlsComponent,
         CombatTokensViewerComponent,
         CombatTokenSetsComponent,
+        CombatTokenEditorWheelDirective,
+        CombatTokenEditorDragDirective,
     ],
     exports: [
         CombatTokensComponent,
