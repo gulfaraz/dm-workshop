@@ -11,17 +11,13 @@ export class CombatTokenEditorWheelDirective {
     onWheel(wheelEvent: WheelEvent) {
         wheelEvent.preventDefault();
         const speed = Math.ceil(Math.abs(wheelEvent.deltaY) / 40);
-        if (wheelEvent.deltaY > 0) {
-            this.appCombatTokenEditorWheel.zoom = Math.min(
+        this.appCombatTokenEditorWheel.zoom = Math.max(
+            zoomRange.min,
+            Math.min(
                 zoomRange.max,
-                this.appCombatTokenEditorWheel.zoom + speed,
-            );
-        }
-        if (wheelEvent.deltaY < 0) {
-            this.appCombatTokenEditorWheel.zoom = Math.max(
-                zoomRange.min,
-                this.appCombatTokenEditorWheel.zoom - speed,
-            );
-        }
+                this.appCombatTokenEditorWheel.zoom +
+                    speed * Math.sign(wheelEvent.deltaY),
+            ),
+        );
     }
 }

@@ -3,9 +3,11 @@ export interface Token {
     size: string;
     colour: string;
     zoom: number;
+    positionX?: number;
+    positionY?: number;
 }
 
-export const sizes = {
+export const sizes: { [key: string]: string } = {
     Tiny: '1x1',
     Small: '2x2',
     Medium: '2x2',
@@ -30,4 +32,12 @@ export const zoomRange = {
     max: 200,
 };
 
-export default { sizes, colours, zoomRange };
+export const getTokenSize = (tokenSize: string) => parseInt(sizes[tokenSize]);
+
+export const scaleTokenPosition = (
+    tokenPosition: number | undefined,
+    tokenSize: string,
+) =>
+    tokenPosition ? tokenPosition * getTokenSize(tokenSize) + 'px' : 'center';
+
+export default { sizes, colours, zoomRange, getTokenSize, scaleTokenPosition };
