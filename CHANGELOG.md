@@ -1,3 +1,13 @@
+# [0.10.0](https://github.com/gulfaraz/dm-workshop/compare/v0.9.6...v0.10.0) (2023-07-27)
+
+
+### Features
+
+* drag to position image in combat token ([de80557](https://github.com/gulfaraz/dm-workshop/commit/de80557ae8befeea7d43eac9ffcdb16427976e91))
+* use mouse wheel to adjust combat token zoom ([927901e](https://github.com/gulfaraz/dm-workshop/commit/927901e72794a0a766741bf5941995074e70e08b))
+
+
+
 ## [0.9.6](https://github.com/gulfaraz/dm-workshop/compare/v0.9.5...v0.9.6) (2023-07-25)
 
 
@@ -83,15 +93,6 @@
 ### Features
 
 * stripe payment link ([01b20d8](https://github.com/gulfaraz/dm-workshop/commit/01b20d859a0591e96648e35bf5fe30dc65a58819))
-
-
-
-# [0.6.0](https://github.com/gulfaraz/dm-workshop/compare/v0.5.1...v0.6.0) (2023-04-21)
-
-
-### Features
-
-* remove alignment tracker ([4268ae7](https://github.com/gulfaraz/dm-workshop/commit/4268ae76a6a55ded422e3c4bf75658b4f5a79d84))
 
 
 
