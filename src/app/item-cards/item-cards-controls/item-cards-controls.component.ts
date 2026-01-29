@@ -14,7 +14,5 @@ export class ItemCardsControlsComponent {
     @Output() togglePreviewEvent = new EventEmitter<boolean>();
 
     togglePreview = (segmentCustomEvent: SegmentCustomEvent) =>
-        this.togglePreviewEvent.emit(
-            segmentCustomEvent.detail.value === 'true',
-        );
+        this.togglePreviewEvent.emit(!!segmentCustomEvent.detail.value);
 }
