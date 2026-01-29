@@ -11,7 +11,8 @@
         </ion-col>
     </ion-row>
     <ion-row>
-        <ion-col *ngFor="let tokenSetName of tokenSetNames">
+        @for (tokenSetName of tokenSetNames; track tokenSetName) {
+        <ion-col>
             <ion-button
                 expand="block"
                 fill="solid"
@@ -20,5 +21,6 @@
                 >{{ tokenSetName }}</ion-button
             >
         </ion-col>
+        }
     </ion-row>
 </ion-grid>

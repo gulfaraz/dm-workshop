@@ -6,6 +6,7 @@ import { getExportName } from './utils';
 @Component({
     selector: 'app-pdf-exporter',
     templateUrl: './exporter.component.html',
+    standalone: false,
 })
 export class PdfExporterComponent {
     @Input() label = 'Export PDF';

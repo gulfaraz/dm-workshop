@@ -5,6 +5,7 @@ import tokenSets from './combat-token.sets';
 @Component({
     selector: 'app-combat-token-sets',
     templateUrl: './combat-token-sets.component.html',
+    standalone: false,
 })
 export class CombatTokenSetsComponent {
     @Output() loadTokenSetEvent = new EventEmitter<string>();

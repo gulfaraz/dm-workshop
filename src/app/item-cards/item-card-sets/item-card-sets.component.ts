@@ -5,6 +5,7 @@ import cardSets from './item-card.sets';
 @Component({
     selector: 'app-item-card-sets',
     templateUrl: './item-card-sets.component.html',
+    standalone: false,
 })
 export class ItemCardSetsComponent {
     @Output() loadCardSetEvent = new EventEmitter<string>();

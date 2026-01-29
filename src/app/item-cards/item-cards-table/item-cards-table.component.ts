@@ -7,6 +7,7 @@ import { Card, sizes } from '../item-cards.type';
     selector: 'app-item-cards-table',
     templateUrl: './item-cards-table.component.html',
     styleUrls: ['./item-cards-table.component.scss'],
+    standalone: false,
 })
 export class ItemCardsTableComponent {
     @Input() cards: Card[] = [];

@@ -1,10 +1,12 @@
 <ion-list>
-    <ion-note lines="none" *ngIf="cards.length < 1" class="ion-margin">
+    @if (cards.length < 1) {
+    <ion-note lines="none" class="ion-margin">
         Add <ion-text class="text-weight-700"> Item Cards </ion-text> using
         <ion-text class="text-weight-700"> Item Card Form </ion-text> or
         <ion-text class="text-weight-700"> Import Item Cards JSON </ion-text>
     </ion-note>
-    <ion-item-sliding *ngFor="let card of cards">
+    } @for (card of cards; track card) {
+    <ion-item-sliding>
         <ion-item button lines="full" detail="false" (click)="loadCard(card)">
             <ion-label
                 class="identifier"
@@ -32,9 +34,9 @@
                 (ionChange)="setCardSize(card, $any($event))"
                 title="Size: {{ card.size }}"
             >
-                <ion-select-option *ngFor="let size of sizes" [value]="size">{{
-                    size
-                }}</ion-select-option>
+                @for (size of sizes; track size) {
+                <ion-select-option [value]="size">{{ size }}</ion-select-option>
+                }
             </ion-select>
         </ion-item>
         <ion-item-options side="end" (ionSwipe)="deleteCard(card)">
@@ -46,4 +48,5 @@
             >
         </ion-item-options>
     </ion-item-sliding>
+    }
 </ion-list>

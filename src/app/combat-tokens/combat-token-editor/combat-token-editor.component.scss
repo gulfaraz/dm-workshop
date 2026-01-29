@@ -4,7 +4,24 @@
 }
 
 .token-preview {
+    border: 1px solid
+        var(--ion-color-step-300, var(--ion-background-color-step-300, #b3b3b3));
+    border-radius: 4px;
+    height: 100%;
+
+    .token-preview-label {
+        background: white;
+        position: absolute;
+        top: -3px;
+        left: 30px;
+        padding-left: 4px;
+        padding-right: 4px;
+        font-size: 0.9rem;
+    }
+
     .token {
+        margin-left: auto;
+        margin-right: auto;
         margin-top: calc(50% - var(--size) / 2);
     }
 
@@ -23,7 +40,7 @@
 
     &::part(pin) {
         transform: translate3d(0, 0, 0) scale(1);
-        top: 14px;
+        top: 11px;
         z-index: 3;
     }
 }

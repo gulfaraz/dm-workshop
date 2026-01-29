@@ -6,6 +6,7 @@ import { Card } from '../item-cards.type';
 @Component({
     selector: 'app-item-cards-controls',
     templateUrl: './item-cards-controls.component.html',
+    standalone: false,
 })
 export class ItemCardsControlsComponent {
     @Input() preview = false;

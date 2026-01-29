@@ -1,8 +1,9 @@
 <ion-content>
     <div class="body A4 landscape">
-        <section class="sheet combat-tokens-sheet" *ngFor="let sheet of sheets">
+        @for (sheet of sheets; track sheet) {
+        <section class="sheet combat-tokens-sheet">
+            @for (token of sheet; track token) {
             <div
-                *ngFor="let token of sheet"
                 [class]="['token', token.size.toLowerCase()]"
                 [style.background-image]="'url(' + token.image + ')'"
                 [style.border-color]="token.colour"
@@ -15,6 +16,8 @@
                 "
                 (click)="deleteToken(token)"
             ></div>
+            }
         </section>
+        }
     </div>
 </ion-content>

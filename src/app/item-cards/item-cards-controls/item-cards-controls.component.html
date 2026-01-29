@@ -1,15 +1,16 @@
 <ion-header class="ion-margin-bottom">
     <ion-toolbar color="transparent">
+        @if (!preview) {
         <app-json-exporter
-            *ngIf="!preview"
             label="Export Item Cards JSON"
             [json]="cards"
         ></app-json-exporter>
+        } @if (preview) {
         <app-pdf-exporter
-            *ngIf="preview"
             label="Export Item Cards PDF"
             sheetSelector=".item-cards-sheet"
         ></app-pdf-exporter>
+        }
         <ion-segment
             class="ion-no-margin"
             [value]="preview"
@@ -17,10 +18,10 @@
             color="dark"
             (ionChange)="togglePreview($any($event))"
         >
-            <ion-segment-button value="false">
+            <ion-segment-button [value]="false">
                 <ion-label>Table</ion-label>
             </ion-segment-button>
-            <ion-segment-button value="true">
+            <ion-segment-button [value]="true">
                 <ion-label>PDF</ion-label>
             </ion-segment-button>
         </ion-segment>

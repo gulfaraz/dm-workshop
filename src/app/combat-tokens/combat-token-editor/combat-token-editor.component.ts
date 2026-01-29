@@ -16,6 +16,7 @@ import config from '../../shared/config';
         '../combat-token.component.scss',
         './combat-token-editor.component.scss',
     ],
+    standalone: false,
 })
 export class CombatTokenEditorComponent {
     @Input() token: Token = {} as Token;
