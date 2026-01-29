@@ -5,6 +5,7 @@ import {
     OnChanges,
     Output,
     SimpleChanges,
+    inject,
 } from '@angular/core';
 
 import { Token, scaleTokenPosition } from '../combat-tokens.type';
@@ -21,13 +22,13 @@ import { CombatTokensService } from '../combat-tokens.service';
     standalone: false,
 })
 export class CombatTokensViewerComponent implements OnChanges {
+    private combatTokensService = inject(CombatTokensService);
+
     @Input() tokens: Token[] = [];
     @Output() deleteTokenEvent = new EventEmitter<Token>();
 
     sheets: Token[][] = [];
     scaleTokenPosition = scaleTokenPosition;
-
-    constructor(private combatTokensService: CombatTokensService) {}
 
     ngOnChanges(changes: SimpleChanges) {
         if ('tokens' in changes) this.loadSheets();

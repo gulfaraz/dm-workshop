@@ -103,17 +103,18 @@
                 (togglePreviewEvent)="togglePreview($event)"
                 [cards]="cards"
             ></app-item-cards-controls>
+            @if (!preview) {
             <app-item-cards-table
-                *ngIf="!preview"
                 [cards]="cards"
                 (deleteCardEvent)="deleteCard($event)"
                 (loadCardEvent)="loadCard($event)"
             ></app-item-cards-table>
+            } @if (preview) {
             <app-item-cards-viewer
-                *ngIf="preview"
                 [cards]="cards"
                 (loadCardEvent)="loadCard($event)"
             ></app-item-cards-viewer>
+            }
         </ion-col>
     </ion-row>
 </ion-grid>

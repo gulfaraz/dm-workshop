@@ -83,11 +83,11 @@
                             id="size"
                             required="true"
                         >
-                            <ion-select-option
-                                *ngFor="let size of sizes | keyvalue"
-                                [value]="size.key"
-                                >{{ size.key }}</ion-select-option
-                            >
+                            @for (size of sizes | keyvalue; track size) {
+                            <ion-select-option [value]="size.key">{{
+                                size.key
+                            }}</ion-select-option>
+                            }
                         </ion-select>
                     </ion-col>
                 </ion-row>
