@@ -10,15 +10,18 @@ jobs:
   test-build-deploy:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [24.x]
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node-version }}
 
@@ -32,7 +35,7 @@ jobs:
         if: github.event_name == 'push'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist
+          folder: dist/browser
 
   bump-version:
     needs: [test-build-deploy]
@@ -40,21 +43,23 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+      actions: read
+
     steps:
       - name: Wait for previous workflow to complete
-        uses: softprops/turnstyle@v1
+        uses: softprops/turnstyle@v3
         with:
           abort-after-seconds: 1800
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
 
       - name: Bump version and push tag
         uses: TriPSs/conventional-changelog-action@v3
         with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           git-message: "chore(release): {version}"
           release-count: 10
-
-permissions:
-  contents: write
