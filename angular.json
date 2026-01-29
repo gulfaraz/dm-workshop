@@ -73,10 +73,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "dm-workshop:build:production"
+              "buildTarget": "dm-workshop:build:production"
             },
             "development": {
-              "browserTarget": "dm-workshop:build:development"
+              "buildTarget": "dm-workshop:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -84,7 +84,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "dm-workshop:build"
+            "buildTarget": "dm-workshop:build"
           }
         },
         "test": {
