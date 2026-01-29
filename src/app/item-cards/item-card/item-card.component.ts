@@ -6,6 +6,7 @@ import { Card } from '../item-cards.type';
     selector: 'app-item-card',
     templateUrl: './item-card.component.html',
     styleUrls: ['./item-card.component.scss'],
+    standalone: false,
 })
 export class ItemCardComponent {
     @Input() card!: Card;

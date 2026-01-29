@@ -17,10 +17,10 @@
             color="dark"
             (ionChange)="togglePreview($any($event))"
         >
-            <ion-segment-button value="false">
+            <ion-segment-button [value]="false">
                 <ion-label>Table</ion-label>
             </ion-segment-button>
-            <ion-segment-button value="true">
+            <ion-segment-button [value]="true">
                 <ion-label>PDF</ion-label>
             </ion-segment-button>
         </ion-segment>

@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
     selector: 'app-dm-workshop',
     templateUrl: './dm-workshop.component.html',
     styleUrls: ['./dm-workshop.component.scss'],
+    standalone: false,
 })
 export class DMWorkshopComponent {
     paymentLink = 'https://buy.stripe.com/5kAcMMbGXc0NexW144';

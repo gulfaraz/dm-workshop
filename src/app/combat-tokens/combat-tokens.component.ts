@@ -7,6 +7,7 @@ import { tokenSets } from './combat-token-sets/combat-token.sets';
     selector: 'app-combat-tokens',
     templateUrl: './combat-tokens.component.html',
     styleUrls: ['./combat-tokens.component.scss'],
+    standalone: false,
 })
 export class CombatTokensComponent {
     tokens: Token[] = tokenSets['Mixed'];

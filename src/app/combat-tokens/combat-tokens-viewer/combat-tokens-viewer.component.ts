@@ -18,6 +18,7 @@ import { CombatTokensService } from '../combat-tokens.service';
         '../combat-token.component.scss',
         './combat-tokens-viewer.component.scss',
     ],
+    standalone: false,
 })
 export class CombatTokensViewerComponent implements OnChanges {
     @Input() tokens: Token[] = [];

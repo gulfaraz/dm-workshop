@@ -5,6 +5,7 @@ import { toPrecision } from '../../shared/utils';
 
 @Directive({
     selector: '[appCombatTokenEditorDrag]',
+    standalone: false,
 })
 export class CombatTokenEditorDragDirective {
     @Input() appCombatTokenEditorDrag: Token = {} as Token;

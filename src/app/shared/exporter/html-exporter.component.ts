@@ -5,6 +5,7 @@ import { download } from './utils';
 @Component({
     selector: 'app-html-exporter',
     templateUrl: './exporter.component.html',
+    standalone: false,
 })
 export class HtmlExporterComponent {
     @Input() label = 'Export HTML';

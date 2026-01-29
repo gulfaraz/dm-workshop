@@ -17,6 +17,7 @@ import { Card } from '../item-cards.type';
         '../../shared/paper-css.component.scss',
         './item-cards-viewer.component.scss',
     ],
+    standalone: false,
 })
 export class ItemCardsViewerComponent implements OnChanges {
     @Input() cards: Card[] = [];

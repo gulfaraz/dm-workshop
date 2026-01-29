@@ -3,6 +3,7 @@ import { Token, zoomRange } from '../combat-tokens.type';
 
 @Directive({
     selector: '[appCombatTokenEditorWheel]',
+    standalone: false,
 })
 export class CombatTokenEditorWheelDirective {
     @Input() appCombatTokenEditorWheel: Token = {} as Token;
